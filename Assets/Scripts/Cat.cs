@@ -21,10 +21,10 @@ public class Cat : MonoBehaviour {
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
-        Vector3 pos = transform.position;
-        pos.x += hAxis * movementSpeed * Time.deltaTime;
-        pos.z += vAxis * movementSpeed * Time.deltaTime;
-        transform.position = pos;
+        Vector3 velocity = rbody.velocity;
+        velocity.x = hAxis * movementSpeed;
+        velocity.z = vAxis * movementSpeed;
+        rbody.velocity = velocity;
         
         if (Input.GetKeyDown("space"))
             Jump();
