@@ -19,17 +19,16 @@ public class Cat : MonoBehaviour {
     }
 
     void Update() {
-        float hAxis = Input.GetAxis("Horizontal");
-        float vAxis = Input.GetAxis("Vertical");
-
+        Vector3 inputVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        
         Vector3 velocity = rbody.velocity;
-        velocity.x = hAxis * movementSpeed;
-        velocity.z = vAxis * movementSpeed;
+        velocity.x = inputVector.normalized.x * movementSpeed;
+        velocity.z = inputVector.normalized.z * movementSpeed;
         rbody.velocity = velocity;
         
         // Rotate towards movement only when input is given
-        if (hAxis != 0 || vAxis != 0) {
-            transform.rotation = Quaternion.LookRotation(new Vector3(hAxis, 0, vAxis));
+        if (inputVector.x != 0 || inputVector.z != 0) {
+            transform.rotation = Quaternion.LookRotation(inputVector.normalized);
         }
 
         if (Input.GetKeyDown("space"))
