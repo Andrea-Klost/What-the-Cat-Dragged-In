@@ -9,7 +9,8 @@ public class Cat : MonoBehaviour {
     public float movementSpeed = 10f;
     public float jumpImpulse = 10f;
     [Tooltip("Radius of sphere used for checking if the cat can jump (i.e. if the player is grounded)")]
-    public float colliderRadius = 1f; 
+    public float colliderRadius = 1f;
+    public float rotateSpeed = 1f;
     
     private Rigidbody rbody;
 
@@ -26,6 +27,11 @@ public class Cat : MonoBehaviour {
         velocity.z = vAxis * movementSpeed;
         rbody.velocity = velocity;
         
+        // Rotate towards movement only when input is given
+        if (hAxis != 0 || vAxis != 0) {
+            transform.rotation = Quaternion.LookRotation(new Vector3(hAxis, 0, vAxis));
+        }
+
         if (Input.GetKeyDown("space"))
             Jump();
     }
