@@ -12,6 +12,8 @@ Stylized_Medieval_World-Low_Poly_Asset_Pack_Free | https://www.cgtrader.com/free
 
 plank_set_fbx | https://www.cgtrader.com/free-3d-models/architectural/other/set-of-boards 
 
+Midd+build+pack+fbx | https://www.cgtrader.com/free-3d-models/exterior/historic-exterior/me-77dcfa41-46ea-4299-ba08-4391c5108a71 
+
 
 ==========
 Materials:
