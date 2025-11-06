@@ -20,6 +20,8 @@ Low - Poly Stylized Market Pack Free low-poly 3D model | https://www.cgtrader.co
 
 Stylized NPC - Peasant Nolant Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/fantasy-character/stylized-npc-peasant-nolant-0dc21f85-761a-4388-9e6f-bebf7463580c
 
+Witch Hat | https://www.cgtrader.com/free-3d-models/character/clothing/witch-hat-lowpoly-3ebcb6d6-1b91-4a00-8134-7cdb58be1a49 
+
 
 
 
