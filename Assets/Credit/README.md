@@ -18,6 +18,10 @@ Trees_Plants_rocks_low_poly_3D_Models | https://www.cgtrader.com/free-3d-models/
 
 Low - Poly Stylized Market Pack Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/furniture/furniture-set/low-poly-stylized-market-pack 
 
+Stylized NPC - Peasant Nolant Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/fantasy-character/stylized-npc-peasant-nolant-0dc21f85-761a-4388-9e6f-bebf7463580c
+
+
+
 
 ==========
 Materials:
