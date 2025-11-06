@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 7
   jumpImpulse: 9
-  colliderRadius: 1
+  colliderRadius: 0.5
   rotateSpeed: 6
 --- !u!1 &2845296091973216902
 GameObject:
