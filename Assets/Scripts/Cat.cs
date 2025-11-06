@@ -8,8 +8,12 @@ public class Cat : MonoBehaviour {
     [Header("Inscribed")] 
     public float movementSpeed = 10f;
     public float jumpImpulse = 10f;
-    [Tooltip("Radius of sphere used for checking if the cat can jump (i.e. if the player is grounded)")]
+    [Tooltip("Radius of capsule used for checking if the cat can jump (i.e. if the player is grounded)")]
     public float colliderRadius = 1f;
+    [Tooltip("Front position of capsule used for checking if the cat can jump (i.e. if the player is grounded)")]
+    public Transform frontPosition;
+    [Tooltip("Back position of capsule used for checking if the cat can jump (i.e. if the player is grounded)")]
+    public Transform backPosition;
     [Tooltip("How fast the cat rotates to match the player's input")]
     public float rotateSpeed = 1f;
     
@@ -41,7 +45,7 @@ public class Cat : MonoBehaviour {
 
     void Jump() {
         // Check if the player is grounded before jumping by checking for colliders under them
-        if (Physics.CheckSphere(transform.position + Vector3.up * (colliderRadius * 0.9f), colliderRadius)) {
+        if (Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius)) {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
             rbody.velocity = velocity;
