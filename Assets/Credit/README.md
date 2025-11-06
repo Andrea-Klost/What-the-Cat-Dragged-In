@@ -6,8 +6,6 @@ Prefabs:
 
 NatureFreePack1 | https://www.cgtrader.com/free-3d-models/exterior/landscape/low-poly-trees-grass-and-rocks-lite
 
-PlantPack1 | https://madebyjawns.itch.io/plantpack1 
-
 ==========
 Materials:
 ==========
