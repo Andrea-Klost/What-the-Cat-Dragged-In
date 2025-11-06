@@ -8,6 +8,7 @@ NatureFreePack1 | https://www.cgtrader.com/free-3d-models/exterior/landscape/low
 
 PlantPack1 | https://madebyjawns.itch.io/plantpack1 
 
+Stylized_Medieval_World-Low_Poly_Asset_Pack_Free | https://www.cgtrader.com/free-3d-models/exterior/landscape/low-poly-models-a4d69428-3cbc-46f3-b271-e96dac28e75b
 
 
 ==========
