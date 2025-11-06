@@ -65,7 +65,7 @@ MonoBehaviour:
   movementSpeed: 7
   jumpImpulse: 9
   colliderRadius: 1
-  rotateSpeed: 4
+  rotateSpeed: 6
 --- !u!1 &2845296091973216902
 GameObject:
   m_ObjectHideFlags: 0
