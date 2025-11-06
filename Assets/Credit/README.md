@@ -14,6 +14,10 @@ plank_set_fbx | https://www.cgtrader.com/free-3d-models/architectural/other/set-
 
 Midd+build+pack+fbx | https://www.cgtrader.com/free-3d-models/exterior/historic-exterior/me-77dcfa41-46ea-4299-ba08-4391c5108a71 
 
+Trees_Plants_rocks_low_poly_3D_Models | https://www.cgtrader.com/free-3d-models/plant/other/trees-plants-rocks-low-poly
+
+
+
 
 ==========
 Materials:
