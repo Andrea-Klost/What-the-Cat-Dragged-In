@@ -22,7 +22,7 @@ Handpainted RPG Potions | https://www.cgtrader.com/free-3d-models/food/beverage/
 
 Skull Potion | https://www.cgtrader.com/free-3d-models/various/various-models/stylized-potion-with-skull-low-poly-3d-model
 
-
+Magic Eye Potion | https://www.cgtrader.com/free-3d-models/various/various-models/enchanted-griffon-eye-potion-bottle
 
 ==========
 Materials:
