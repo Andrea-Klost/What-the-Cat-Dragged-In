@@ -22,7 +22,7 @@ Stylized NPC - Peasant Nolant Free low-poly 3D model | https://www.cgtrader.com/
 
 Witch Hat | https://www.cgtrader.com/free-3d-models/character/clothing/witch-hat-lowpoly-3ebcb6d6-1b91-4a00-8134-7cdb58be1a49 
 
-
+Casual Character Pack FREE Rigged NPCs Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/anatomy/character-pack-free-stylized-rigged-npcs 
 
 
 ==========
