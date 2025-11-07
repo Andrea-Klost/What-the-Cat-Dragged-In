@@ -18,6 +18,7 @@ Trees_Plants_rocks_low_poly_3D_Models | https://www.cgtrader.com/free-3d-models/
 
 Low - Poly Stylized Market Pack Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/furniture/furniture-set/low-poly-stylized-market-pack 
 
+Handpainted RPG Potions | https://www.cgtrader.com/free-3d-models/food/beverage/free-handpainted-rpg-potions-cb2f1659-c5c4-43bd-b47e-b50ba114d8f8
 
 ==========
 Materials:
