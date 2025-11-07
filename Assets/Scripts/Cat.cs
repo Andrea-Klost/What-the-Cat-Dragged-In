@@ -8,6 +8,15 @@ public class Cat : MonoBehaviour {
     [Header("Movement")] 
     public float movementSpeed = 10f;
     public float jumpImpulse = 10f;
+
+    [Header("Grabbing")]
+    [Tooltip("Point that defines position of object when grabbed")]
+    public Transform grabPoint;
+    [Tooltip("An object that is currently able to be grabbed")]
+    [SerializeField] private GameObject grabTarget;
+    [Tooltip("The object that is currently grabbed")]
+    [SerializeField] private GameObject grabbedObject;
+    
     
     [Header("Ground Checking")]
     [Tooltip("Radius of capsule used for checking if the cat can jump (i.e. if the player is grounded)")]
@@ -25,8 +34,9 @@ public class Cat : MonoBehaviour {
 
     void Awake() {
         rbody = GetComponent<Rigidbody>();
+        grabTarget = grabbedObject = null;
     }
-
+    
     void Update() {
         Vector3 inputVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         
@@ -45,6 +55,8 @@ public class Cat : MonoBehaviour {
 
         if (Input.GetKeyDown("space"))
             Jump();
+        if (Input.GetKeyDown("o"))
+            Grab();
     }
 
     void Jump() {
@@ -54,6 +66,33 @@ public class Cat : MonoBehaviour {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
             rbody.velocity = velocity;
+        }
+    }
+
+    void OnTriggerEnter(Collider other) {
+        Grabbable grabScript = other.GetComponent<Grabbable>();
+        if (grabScript != null) {
+            grabTarget = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit(Collider other) {
+        if (other.gameObject == grabTarget) {
+            grabTarget = null;
+        }
+    }
+    
+    void Grab() {
+        if (grabbedObject != null) { // Already have an object, attempt to drop
+            grabbedObject.transform.SetParent(null);
+            grabbedObject = null;
+        }
+        else { // No grabbed object, grab current grab target if exists
+            if (grabTarget == null) return;
+            grabTarget.transform.SetParent(grabPoint, false);
+            grabTarget.transform.position = grabPoint.transform.position;
+            grabbedObject = grabTarget;
+            grabTarget = null;
         }
     }
 }
