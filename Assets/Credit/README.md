@@ -35,6 +35,7 @@ Witch Hat | https://www.cgtrader.com/free-3d-models/character/clothing/witch-hat
 
 Casual Character Pack FREE Rigged NPCs Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/anatomy/character-pack-free-stylized-rigged-npcs 
 
+"Cat - PS1 Low Poly (Rigged)" by Wersaus33 (under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)) | https://skfb.ly/oFEPp 
 
 ==========
 Materials:
