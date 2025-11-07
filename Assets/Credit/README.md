@@ -20,6 +20,10 @@ Low - Poly Stylized Market Pack Free low-poly 3D model | https://www.cgtrader.co
 
 Handpainted RPG Potions | https://www.cgtrader.com/free-3d-models/food/beverage/free-handpainted-rpg-potions-cb2f1659-c5c4-43bd-b47e-b50ba114d8f8
 
+Skull Potion | https://www.cgtrader.com/free-3d-models/various/various-models/stylized-potion-with-skull-low-poly-3d-model
+
+
+
 ==========
 Materials:
 ==========
