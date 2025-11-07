@@ -61,14 +61,18 @@ public class Cat : MonoBehaviour {
 
     void Jump() {
         // Check if the player is grounded before jumping by checking for colliders under them
-        if (Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius, 
-                1 << LayerMask.NameToLayer("Ground"))) {
+        if (IsGrounded()) {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
             rbody.velocity = velocity;
         }
     }
 
+    bool IsGrounded() {
+        return Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius, 
+            1 << LayerMask.NameToLayer("Ground"));
+    }
+    
     void OnTriggerEnter(Collider other) {
         Grabbable grabScript = other.GetComponent<Grabbable>();
         if (grabScript != null) {
