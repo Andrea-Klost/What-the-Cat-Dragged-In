@@ -18,6 +18,17 @@ Trees_Plants_rocks_low_poly_3D_Models | https://www.cgtrader.com/free-3d-models/
 
 Low - Poly Stylized Market Pack Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/furniture/furniture-set/low-poly-stylized-market-pack 
 
+Handpainted RPG Potions | https://www.cgtrader.com/free-3d-models/food/beverage/free-handpainted-rpg-potions-cb2f1659-c5c4-43bd-b47e-b50ba114d8f8
+
+Skull Potion | https://www.cgtrader.com/free-3d-models/various/various-models/stylized-potion-with-skull-low-poly-3d-model
+
+Magic Eye Potion | https://www.cgtrader.com/free-3d-models/various/various-models/enchanted-griffon-eye-potion-bottle
+
+Low-Poly Fruits | https://www.cgtrader.com/free-3d-models/food/fruit/low-poly-mini-fruit-pack
+
+pack_o_fruits_&_veggies | https://www.cgtrader.com/free-3d-models/food/miscellaneous/asset-pack-of-fruits-vegetables-and-flowers-2ab1826c-d049-42b6-ac02-42cf522b7e58
+
+CartoonWoodFurniture_FBX | https://www.cgtrader.com/free-3d-models/interior/other/cartoon-wood-furniture
 Stylized NPC - Peasant Nolant Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/fantasy-character/stylized-npc-peasant-nolant-0dc21f85-761a-4388-9e6f-bebf7463580c
 
 Witch Hat | https://www.cgtrader.com/free-3d-models/character/clothing/witch-hat-lowpoly-3ebcb6d6-1b91-4a00-8134-7cdb58be1a49 
