@@ -49,7 +49,8 @@ public class Cat : MonoBehaviour {
 
     void Jump() {
         // Check if the player is grounded before jumping by checking for colliders under them
-        if (Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius)) {
+        if (Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius, 
+                1 << LayerMask.NameToLayer("Ground"))) {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
             rbody.velocity = velocity;
