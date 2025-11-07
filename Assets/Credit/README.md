@@ -24,6 +24,10 @@ Skull Potion | https://www.cgtrader.com/free-3d-models/various/various-models/st
 
 Magic Eye Potion | https://www.cgtrader.com/free-3d-models/various/various-models/enchanted-griffon-eye-potion-bottle
 
+Low-Poly Fruits | https://www.cgtrader.com/free-3d-models/food/fruit/low-poly-mini-fruit-pack
+
+
+
 ==========
 Materials:
 ==========
