@@ -88,8 +88,10 @@ public class Cat : MonoBehaviour {
     
     void Grab() {
         if (grabbedObject != null) { // Already have an object, attempt to drop
-            grabbedObject.transform.SetParent(null);
-            grabbedObject = null;
+            if (IsGrounded()) {
+                grabbedObject.transform.SetParent(null);
+                grabbedObject = null;
+            }
         }
         else { // No grabbed object, grab current grab target if exists
             if (grabTarget == null) return;
