@@ -89,14 +89,28 @@ public class Cat : MonoBehaviour {
     void Grab() {
         if (grabbedObject != null) { // Already have an object, attempt to drop
             if (IsGrounded()) {
-                grabbedObject.transform.SetParent(null);
+                grabbedObject.transform.SetParent(null); // Set parent to world
                 grabbedObject = null;
             }
         }
         else { // No grabbed object, grab current grab target if exists
             if (grabTarget == null) return;
+            
+            Grabbable grabScript = grabTarget.GetComponent<Grabbable>();
+            
+            // Reparent to move with Cat
             grabTarget.transform.SetParent(grabPoint, false);
+            
+            /* Set up transform of grabbed object */
+            // Rotate so that the item is facing the same direction as the Cat
+            // (ensures item is held the same way when grabbed from any angle)
+            grabTarget.transform.rotation = Quaternion.LookRotation(this.transform.forward);
+            // Set position to Cat's grabPoint
             grabTarget.transform.position = grabPoint.transform.position;
+            // Offset position by grabbed object's grabPoint
+            grabTarget.transform.position += grabTarget.transform.position - grabScript.grabPoint.position;
+            
+            // Move grabTarget to be the grabbedObject
             grabbedObject = grabTarget;
             grabTarget = null;
         }
