@@ -29,6 +29,7 @@ Low-Poly Fruits | https://www.cgtrader.com/free-3d-models/food/fruit/low-poly-mi
 pack_o_fruits_&_veggies | https://www.cgtrader.com/free-3d-models/food/miscellaneous/asset-pack-of-fruits-vegetables-and-flowers-2ab1826c-d049-42b6-ac02-42cf522b7e58
 
 CartoonWoodFurniture_FBX | https://www.cgtrader.com/free-3d-models/interior/other/cartoon-wood-furniture
+
 Stylized NPC - Peasant Nolant Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/fantasy-character/stylized-npc-peasant-nolant-0dc21f85-761a-4388-9e6f-bebf7463580c
 
 Witch Hat | https://www.cgtrader.com/free-3d-models/character/clothing/witch-hat-lowpoly-3ebcb6d6-1b91-4a00-8134-7cdb58be1a49 
@@ -36,6 +37,7 @@ Witch Hat | https://www.cgtrader.com/free-3d-models/character/clothing/witch-hat
 Casual Character Pack FREE Rigged NPCs Free low-poly 3D model | https://www.cgtrader.com/free-3d-models/character/anatomy/character-pack-free-stylized-rigged-npcs 
 
 Emaceart | https://www.cgtrader.com/free-3d-models/exterior/other/low-poly-bridges-pack-1-3-lods-low-poly-3d-model ; https://www.cgtrader.com/free-3d-models/exterior/landscape/low-poly-fences-and-wall-bundle-pack-1-3-lods ; https://www.cgtrader.com/free-3d-models/architectural/other/free-fantasy-medieval-town-unity-props-pack
+
 "Cat - PS1 Low Poly (Rigged)" by Wersaus33 (under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)) | https://skfb.ly/oFEPp 
 
 ==========
