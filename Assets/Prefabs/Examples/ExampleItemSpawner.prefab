@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977883899436730470}
   - component: {fileID: 977883899436730471}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: ExampleItemSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 977883900012978013}
   - component: {fileID: 977883900012978014}
   - component: {fileID: 977883900012978015}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 977883900605941431}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}

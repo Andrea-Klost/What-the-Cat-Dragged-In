@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 321531145239845476}
   - component: {fileID: 321531145239845466}
   - component: {fileID: 321531145239845477}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321531146562228162}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GrabPoint
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 321531147231624594}
   - component: {fileID: 321531147231624605}
   - component: {fileID: 321531147231624604}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ExampleGrabbable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
