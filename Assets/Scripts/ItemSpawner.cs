@@ -9,7 +9,7 @@ public class ItemSpawner : MonoBehaviour {
     public GameObject itemPrefab;
     [Tooltip("Location at which items are spawned")]
     public Transform spawnPoint;
-    [Tooltip("Max number of items that can be concurrently spawned." +
+    [Tooltip("Max number of items that can be concurrently spawned. " +
              "If the spawner attempts to spawn an item at this limit, the oldest spawned item will be destroyed.")]
     public int maxItemInstances = 3;
     [Tooltip("Number of seconds after an item is taken to spawn a new item")]
