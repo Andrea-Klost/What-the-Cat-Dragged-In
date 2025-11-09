@@ -97,7 +97,7 @@ public class Cat : MonoBehaviour {
             if (grabTarget == null) return;
             
             Grabbable grabScript = grabTarget.GetComponent<Grabbable>();
-            
+
             // Reparent to move with Cat
             grabTarget.transform.SetParent(grabPoint, false);
             
@@ -109,6 +109,11 @@ public class Cat : MonoBehaviour {
             grabTarget.transform.position = grabPoint.transform.position;
             // Offset position by grabbed object's grabPoint
             grabTarget.transform.position += grabTarget.transform.position - grabScript.grabPoint.position;
+            
+            // If grabbed object has an ItemSpawner managing it, alert it that its item has been grabbed
+            if (grabScript.Manager != null) {
+                grabScript.Manager.ItemGrabbed(grabTarget);
+            }
             
             // Move grabTarget to be the grabbedObject
             grabbedObject = grabTarget;

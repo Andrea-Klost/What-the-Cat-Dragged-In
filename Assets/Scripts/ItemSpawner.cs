@@ -36,6 +36,10 @@ public class ItemSpawner : MonoBehaviour {
 
     void SpawnItem() {
         GameObject newItem = Instantiate(itemPrefab);
+        Grabbable itemGrabScript = newItem.GetComponent<Grabbable>();
+        if (itemGrabScript != null) {
+            itemGrabScript.Manager = this;
+        }
         newItem.transform.position = spawnPoint.position;
         _itemInstances.Enqueue(newItem);
         _occupyingItem = newItem;
@@ -46,10 +50,10 @@ public class ItemSpawner : MonoBehaviour {
             Destroy(_itemInstances.Dequeue());
         }
     }
-    
-    void OnTriggerExit(Collider other) {
+
+    public void ItemGrabbed(GameObject item) {
         // If item occupying the spawner leaves, spawn a new item after a delay
-        if (other.gameObject == _occupyingItem) {
+        if (item == _occupyingItem) {
             _occupyingItem = null;
             Invoke(nameof(SpawnItem), itemSpawnDelay);
         }
