@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4823310275798212741}
   - component: {fileID: 4812565296584125521}
   m_Layer: 0
-  m_Name: Flower5
+  m_Name: Gloom_Bloom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

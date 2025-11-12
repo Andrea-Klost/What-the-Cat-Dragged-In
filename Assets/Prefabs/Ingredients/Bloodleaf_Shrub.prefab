@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3085178126145150869
+--- !u!1 &7217943861896835120
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3081768532893437343}
-  - component: {fileID: 3075371004192952517}
-  - component: {fileID: 3064583984829503095}
+  - component: {fileID: 7216679208908265636}
+  - component: {fileID: 7228407767750391588}
+  - component: {fileID: 7240797017274137696}
   m_Layer: 0
-  m_Name: MBJ_PlantPack01_Pot04_LOD2_v001 (1)
+  m_Name: MBJ_PlantPack01_Pot05_LOD2_v001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3081768532893437343
+--- !u!4 &7216679208908265636
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3085178126145150869}
-  m_LocalRotation: {x: -0.00000004004687, y: 0.00000083446497, z: 0.9998576, w: -0.01687795}
-  m_LocalPosition: {x: -0.00007927249, y: -0.000022863447, z: 0.000049999988}
+  m_GameObject: {fileID: 7217943861896835120}
+  m_LocalRotation: {x: -0.00000018407445, y: -0.000000032014214, z: -0.16505796, w: 0.9862839}
+  m_LocalPosition: {x: 0.00023087661, y: -0.00012795441, z: -0.00069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3081815121467177055}
+  m_Father: {fileID: 7221658299693813346}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3075371004192952517
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 180.159}
+--- !u!33 &7228407767750391588
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3085178126145150869}
-  m_Mesh: {fileID: 4300000, guid: 6fcfd80e7eba37d4a850f6e849839c4e, type: 3}
---- !u!23 &3064583984829503095
+  m_GameObject: {fileID: 7217943861896835120}
+  m_Mesh: {fileID: 4300000, guid: 9d668d887fc6d5b4783028154ee00939, type: 3}
+--- !u!23 &7240797017274137696
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3085178126145150869}
+  m_GameObject: {fileID: 7217943861896835120}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8d6760d5d91dcd04b9675231bc9c103d, type: 2}
   - {fileID: 2100000, guid: 8d90a4b7cf7089742ac5d742dfcb8389, type: 2}
+  - {fileID: 2100000, guid: 8d6760d5d91dcd04b9675231bc9c103d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3086704703130592897
+--- !u!1 &7218861812089868232
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,47 +92,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3081815121467177055}
-  - component: {fileID: 3075390039942871165}
-  - component: {fileID: 3064137918311643603}
+  - component: {fileID: 7221658299693813346}
+  - component: {fileID: 7232271463235144204}
+  - component: {fileID: 7240797100274440992}
   m_Layer: 0
-  m_Name: Flower6
+  m_Name: Bloodleaf_Shrub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3081815121467177055
+--- !u!4 &7221658299693813346
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3086704703130592897}
-  m_LocalRotation: {x: 0.01193454, y: -0.70700675, z: -0.7070054, w: -0.011934482}
-  m_LocalPosition: {x: 13.973971, y: 0.0013009221, z: 10.138981}
+  m_GameObject: {fileID: 7218861812089868232}
+  m_LocalRotation: {x: 0.11768148, y: 0.6972455, z: 0.69724524, w: -0.11768148}
+  m_LocalPosition: {x: 15.398501, y: 0.078138165, z: 9.972475}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3081768532893437343}
+  - {fileID: 7216679208908265636}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -181.93399}
---- !u!33 &3075390039942871165
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 199.15999}
+--- !u!33 &7232271463235144204
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3086704703130592897}
-  m_Mesh: {fileID: 4300000, guid: f60b452ac7fb63f4bb8fc15acdc43ee8, type: 3}
---- !u!23 &3064137918311643603
+  m_GameObject: {fileID: 7218861812089868232}
+  m_Mesh: {fileID: 4300000, guid: ff284a5bb2461a14b9fc2f924b70e7a8, type: 3}
+--- !u!23 &7240797100274440992
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3086704703130592897}
+  m_GameObject: {fileID: 7218861812089868232}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -146,11 +146,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44de07d83fb9cc046afb1581cfda3ccd, type: 2}
-  - {fileID: 2100000, guid: bce820f2f703995458e6fb4edaa58203, type: 2}
-  - {fileID: 2100000, guid: c3abfbff098ea1c4d8ae346b83743366, type: 2}
-  - {fileID: 2100000, guid: 51283c819c34e8245ba8f63ad360fe24, type: 2}
-  - {fileID: 2100000, guid: e1ba0d7b755fe1a4ea4897362b770bef, type: 2}
+  - {fileID: 2100000, guid: 245de5db22024eb4cb2fcd98a797055a, type: 2}
+  - {fileID: 2100000, guid: 98435b1045b976842abf1c9406e302ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
