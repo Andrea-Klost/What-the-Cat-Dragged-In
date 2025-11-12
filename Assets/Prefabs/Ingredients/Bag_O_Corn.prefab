@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3785855710170579375}
   m_Layer: 0
   m_Name: Bag_O_Corn
-  m_TagString: Untagged
+  m_TagString: Bag_O_Corn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

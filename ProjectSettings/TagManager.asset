@@ -3,7 +3,36 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bag_O_Corn
+  - Banana
+  - Bloodleaf_Shrub
+  - Blue_Duotrophis
+  - Blue_Starpetal
+  - Bread
+  - Cattail
+  - Corn
+  - Crystal_Orchid
+  - Dawn_Petal
+  - Dusk_Eye
+  - Eggplant
+  - Everlight_Bloom
+  - Gloom_Bloom
+  - Green_Apple
+  - Magic_Eggplant
+  - Orange
+  - Orange_Papper
+  - Peace_Bloom
+  - Pear
+  - Purple_Starpetal
+  - Red_Apple
+  - Red_Duotrophis
+  - Red_Papper
+  - Speckled_Shroom
+  - Triangle_Shroom
+  - Unknown_Sapling
+  - Void_Banana
+  - ==INGREDIENT_TAGS==
   layers:
   - Default
   - TransparentFX
@@ -16,8 +45,8 @@ TagManager:
   - Cat
   - Ground
   - Grabbable
-  - 
-  - 
+  - Spawner
+  - Cauldron
   - 
   - 
   - 

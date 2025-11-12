@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3060043062978846878}
   m_Layer: 0
   m_Name: Eggplant
-  m_TagString: Untagged
+  m_TagString: Eggplant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

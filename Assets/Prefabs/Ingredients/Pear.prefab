@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6033201560159399195}
   m_Layer: 0
   m_Name: Pear
-  m_TagString: Untagged
+  m_TagString: Pear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

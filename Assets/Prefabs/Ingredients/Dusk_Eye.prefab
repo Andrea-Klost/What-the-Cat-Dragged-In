@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3064137918311643603}
   m_Layer: 0
   m_Name: Dusk_Eye
-  m_TagString: Untagged
+  m_TagString: Dusk_Eye
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
