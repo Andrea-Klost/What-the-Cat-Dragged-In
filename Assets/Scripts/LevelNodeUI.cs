@@ -6,9 +6,9 @@ public class LevelNodeUI : MonoBehaviour
 {
     [Header("Setup")]
     public string sceneName = "Level1"; // set uniquely per node
-    public Text label;                  // drag the child "Label"
-    public GameObject lockOverlay;      // drag the child "Lock"
-    public Button button;               // drag this node's Button
+    public Text label;                  // the child "Label"
+    public GameObject lockOverlay;      // the child "Lock"
+    public Button button;               // this node's Button
 
     [Header("State")]
     public bool unlocked = false;
