@@ -8,6 +8,15 @@ public class Cat : MonoBehaviour {
     [Header("Movement")] 
     public float movementSpeed = 10f;
     public float jumpImpulse = 10f;
+
+    [Header("Grabbing")]
+    [Tooltip("Point that defines position of object when grabbed")]
+    public Transform grabPoint;
+    [Tooltip("An object that is currently able to be grabbed")]
+    [SerializeField] private GameObject grabTarget;
+    [Tooltip("The object that is currently grabbed")]
+    [SerializeField] private GameObject grabbedObject;
+    
     
     [Header("Ground Checking")]
     [Tooltip("Radius of capsule used for checking if the cat can jump (i.e. if the player is grounded)")]
@@ -25,8 +34,9 @@ public class Cat : MonoBehaviour {
 
     void Awake() {
         rbody = GetComponent<Rigidbody>();
+        grabTarget = grabbedObject = null;
     }
-
+    
     void Update() {
         Vector3 inputVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         
@@ -45,14 +55,64 @@ public class Cat : MonoBehaviour {
 
         if (Input.GetKeyDown("space"))
             Jump();
+        if (Input.GetKeyDown("o"))
+            Grab();
     }
 
     void Jump() {
         // Check if the player is grounded before jumping by checking for colliders under them
-        if (Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius)) {
+        if (IsGrounded()) {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
             rbody.velocity = velocity;
+        }
+    }
+
+    bool IsGrounded() {
+        return Physics.CheckCapsule(frontPosition.position, backPosition.position, colliderRadius, 
+            1 << LayerMask.NameToLayer("Ground"));
+    }
+    
+    void OnTriggerEnter(Collider other) {
+        Grabbable grabScript = other.GetComponent<Grabbable>();
+        if (grabScript != null) {
+            grabTarget = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit(Collider other) {
+        if (other.gameObject == grabTarget) {
+            grabTarget = null;
+        }
+    }
+    
+    void Grab() {
+        if (grabbedObject != null) { // Already have an object, attempt to drop
+            if (IsGrounded()) {
+                grabbedObject.transform.SetParent(null); // Set parent to world
+                grabbedObject = null;
+            }
+        }
+        else { // No grabbed object, grab current grab target if exists
+            if (grabTarget == null) return;
+            
+            Grabbable grabScript = grabTarget.GetComponent<Grabbable>();
+            
+            // Reparent to move with Cat
+            grabTarget.transform.SetParent(grabPoint, false);
+            
+            /* Set up transform of grabbed object */
+            // Rotate so that the item is facing the same direction as the Cat
+            // (ensures item is held the same way when grabbed from any angle)
+            grabTarget.transform.rotation = Quaternion.LookRotation(this.transform.forward);
+            // Set position to Cat's grabPoint
+            grabTarget.transform.position = grabPoint.transform.position;
+            // Offset position by grabbed object's grabPoint
+            grabTarget.transform.position += grabTarget.transform.position - grabScript.grabPoint.position;
+            
+            // Move grabTarget to be the grabbedObject
+            grabbedObject = grabTarget;
+            grabTarget = null;
         }
     }
 }
