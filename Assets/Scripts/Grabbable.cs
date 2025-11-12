@@ -12,6 +12,8 @@ public class Grabbable : MonoBehaviour {
     [Tooltip("Defines point that the Cat will grab the object from. If not set it will default to the object's transform")]
     public Transform grabPoint;
 
+    public ItemSpawner Manager { get; set; } // ItemSpawner that manages this object
+
     void Awake() {
         if (grabPoint == null) { // If not set default to object's transform
             grabPoint = gameObject.transform;
