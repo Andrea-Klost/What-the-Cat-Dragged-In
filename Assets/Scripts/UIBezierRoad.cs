@@ -59,7 +59,7 @@ public class UIBezierRoad : MaskableGraphic
 
         // Build thick strip with round endcaps
         float half = thickness * 0.5f;
-        int baseIndex = 0;
+       // int baseIndex = 0;
 
         // round cap at start
         AddRoundCap(centers[0], centers[1], half, true, capSegments);
