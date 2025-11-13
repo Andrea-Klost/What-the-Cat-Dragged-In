@@ -11,7 +11,7 @@ public class CauldronBrewing : MonoBehaviour
     public string[] recipes;
     public Item[] recipeResults;
     
-    public Slot[3] brewingSlots; // 0-2 ; Ingredients 1-3
+    public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
     public Slot resultSlot;
     public int currIndex = -1;
 
