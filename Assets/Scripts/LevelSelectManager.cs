@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelectManager : MonoBehaviour
 {
     public LevelNodeUI[] nodes;              // assign in order (1,2,3)
-    public string startScreenScene = "start screen"; // exact name of your menu scene
+    public string startScreenScene = "start screen"; // scene name
 
     void Start()
     {
