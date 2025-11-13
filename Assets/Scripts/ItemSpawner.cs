@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour {
-    [Header("Item Settings")]
+    [Header("Inscribed")]
+    [SerializeField]
     [Tooltip("Prefab of the item that the ItemSpawner spawns")]
     public GameObject itemPrefab;
     [Tooltip("Location at which items are spawned")]
