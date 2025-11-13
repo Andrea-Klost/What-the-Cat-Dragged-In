@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7588004005338088316}
   - component: {fileID: 1493028705}
   - component: {fileID: 1493028709}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Red_Papper
   m_TagString: Red_Papper
   m_Icon: {fileID: 0}

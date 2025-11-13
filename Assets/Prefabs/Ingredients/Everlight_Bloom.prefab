@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3113771257764473955}
   - component: {fileID: 144537504}
   - component: {fileID: 144537508}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Everlight_Bloom
   m_TagString: Everlight_Bloom
   m_Icon: {fileID: 0}

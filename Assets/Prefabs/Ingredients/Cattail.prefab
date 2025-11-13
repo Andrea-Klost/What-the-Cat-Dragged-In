@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8678306938583777529}
   - component: {fileID: 1597798774}
   - component: {fileID: 1597798778}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cattail
   m_TagString: Cattail
   m_Icon: {fileID: 0}

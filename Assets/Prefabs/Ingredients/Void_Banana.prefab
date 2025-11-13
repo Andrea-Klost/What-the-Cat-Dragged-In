@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6134032049641241338}
   - component: {fileID: 552262872}
   - component: {fileID: 552262873}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Void_Banana
   m_TagString: Void_Banana
   m_Icon: {fileID: 0}

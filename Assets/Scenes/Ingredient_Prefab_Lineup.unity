@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 114092460}
   - component: {fileID: 114092459}
   - component: {fileID: 114092458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,10 +515,6 @@ PrefabInstance:
     - target: {fileID: 2143629111475801426, guid: 5248d5fbca7263e4bbe3888d3ac77b74, type: 3}
       propertyPath: m_Name
       value: Banana
-      objectReference: {fileID: 0}
-    - target: {fileID: 2143629111475801426, guid: 5248d5fbca7263e4bbe3888d3ac77b74, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8743229304192290216, guid: 5248d5fbca7263e4bbe3888d3ac77b74, type: 3}
       propertyPath: m_RootOrder
@@ -1126,10 +1122,6 @@ PrefabInstance:
     - target: {fileID: 452498389250755408, guid: 57b30532ca43bde4fb499b124c19c437, type: 3}
       propertyPath: m_Name
       value: Bag_O_Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 452498389250755408, guid: 57b30532ca43bde4fb499b124c19c437, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3799933661806316886, guid: 57b30532ca43bde4fb499b124c19c437, type: 3}
       propertyPath: m_RootOrder

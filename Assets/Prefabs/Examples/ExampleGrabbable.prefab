@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 321531145239845476}
   - component: {fileID: 321531145239845466}
   - component: {fileID: 321531145239845477}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 321531147231624594}
   - component: {fileID: 321531147231624605}
   - component: {fileID: 321531147231624604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExampleGrabbable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

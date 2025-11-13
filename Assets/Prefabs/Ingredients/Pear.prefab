@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5281495622601531110}
   - component: {fileID: 7333199780064515009}
   - component: {fileID: 2225920396467445816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Leaf.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6033201560159399195}
   - component: {fileID: 869600348}
   - component: {fileID: 869600352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pear
   m_TagString: Pear
   m_Icon: {fileID: 0}

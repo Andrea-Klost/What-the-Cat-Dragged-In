@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 128758840313119954}
   - component: {fileID: 1427926430}
   - component: {fileID: 1427926434}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Purple_Starpetal
   m_TagString: Purple_Starpetal
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3081768532893437343}
   - component: {fileID: 3075371004192952517}
   - component: {fileID: 3064583984829503095}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MBJ_PlantPack01_Pot04_LOD2_v001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3064137918311643603}
   - component: {fileID: 724293149}
   - component: {fileID: 724293153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dusk_Eye
   m_TagString: Dusk_Eye
   m_Icon: {fileID: 0}

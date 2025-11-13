@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2010930040752222116}
   - component: {fileID: 546751125}
   - component: {fileID: 546751129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Peace_Bloom
   m_TagString: Peace_Bloom
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1994472629482988328}
   - component: {fileID: 2002278184122115358}
   - component: {fileID: 2012702086901427374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pot02_LOD1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996004322356068222}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

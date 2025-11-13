@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2999886158868836653}
   - component: {fileID: 383479417}
   - component: {fileID: 383479421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Unknown_Sapling
   m_TagString: Unknown_Sapling
   m_Icon: {fileID: 0}

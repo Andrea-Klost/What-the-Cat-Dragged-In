@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4092161233390960207}
   - component: {fileID: 1897293527}
   - component: {fileID: 1897293531}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Blue_Starpetal
   m_TagString: Blue_Starpetal
   m_Icon: {fileID: 0}

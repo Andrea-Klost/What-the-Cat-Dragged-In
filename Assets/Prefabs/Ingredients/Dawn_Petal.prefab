@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5255853634074622948}
   - component: {fileID: 944789882}
   - component: {fileID: 944789886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dawn_Petal
   m_TagString: Dawn_Petal
   m_Icon: {fileID: 0}

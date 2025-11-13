@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4798338956156613115}
   - component: {fileID: 4822810050648422711}
   - component: {fileID: 4813389631919048109}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MBJ_PlantPack01_Pot01_LOD1_v001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4812565296584125521}
   - component: {fileID: 2104746892}
   - component: {fileID: 2104746896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gloom_Bloom
   m_TagString: Gloom_Bloom
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4102706730336301484}
   - component: {fileID: 390732961}
   - component: {fileID: 390732965}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crystal_Orchid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 4086091700635535600}
   - component: {fileID: 4090164929231923854}
   - component: {fileID: 4100867776907454144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MBJ_PlantPack01_Pot03_LOD1_v001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

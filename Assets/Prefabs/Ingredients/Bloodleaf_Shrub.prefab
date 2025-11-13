@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7216679208908265636}
   - component: {fileID: 7228407767750391588}
   - component: {fileID: 7240797017274137696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MBJ_PlantPack01_Pot05_LOD2_v001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7240797100274440992}
   - component: {fileID: 395360597}
   - component: {fileID: 395360601}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bloodleaf_Shrub
   m_TagString: Bloodleaf_Shrub
   m_Icon: {fileID: 0}

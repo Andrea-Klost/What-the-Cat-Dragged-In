@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7502725485151339556}
   - component: {fileID: 1849362793}
   - component: {fileID: 1849362797}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Speckled_Shroom
   m_TagString: Speckled_Shroom
   m_Icon: {fileID: 0}
