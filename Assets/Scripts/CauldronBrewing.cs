@@ -18,16 +18,30 @@ public class CauldronBrewing : MonoBehaviour
     // Code is based on this Tutorial : https://youtu.be/1fbd-yTcMgY 
     //Need an OnColl Script here for an Item, place into slots up to index 2
     //If over index 2, make a popup saying "The Cauldron is Full!!"
-    //OnColl(){
-    // Slot nextSlot = null;
-    // nextSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-    // nextSlot.item = currentItem;
-    // itemList[nextSlot.index] = currentItem;
-    // currentItem = null;
-    // Destroy currItem gameObj
-    // ...
-    //
-    //}
+    void OnCollisionEnter(Collision coll){
+        // Find out what collided with the Cauldron
+
+        //If an Ingredient, handle as follows.
+        //Insert gameobj into slot as a sprite.
+        if ((coll.gameObject.layer == LayerMask.NameToLayer("Ingredient")) && (currIndex < 3))
+        {
+            //Increase currIndex
+            currIndex += 1;
+            //Setup nextSlot
+            Slot nextSlot = null;
+            nextSlot.index = currIndex;
+
+            //Setup currItem
+            currItem.itemName = coll.gameObject.tag;
+            //Might need a sprite component?
+            nextSlot.GetComponent<Image>().sprite = currItem.GetComponent<Image>().sprite;
+            nextSlot.item = currItem;
+            itemList[nextSlot.index] = currItem;
+            currItem = null;
+            //Destroy currItem gameObj.
+            Destroy(coll.gameObject);
+        }
+    }
     //Need an OnColl Check for the player, make the UI popup if the player is colliding
     //with Cauldron radius
 

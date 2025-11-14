@@ -5,16 +5,11 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     //public GameObject thisItem;
-    public string itemName; 
+    public string itemName;
+
     // Start is called before the first frame update
     void Start()
     {
         itemName = gameObject.tag; // Will use the objectTag
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
