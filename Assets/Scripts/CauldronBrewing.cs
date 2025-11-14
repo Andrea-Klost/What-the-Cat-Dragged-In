@@ -48,6 +48,7 @@ public class CauldronBrewing : MonoBehaviour
             popupUI.SetActive(true);
         }
 
+        //Continue Here
         //If an Ingredient, handle as follows.
         //Insert gameobj into slot as a sprite.
         if ((coll.gameObject.layer == LayerMask.NameToLayer("Ingredient")) && (currIndex < 3))
