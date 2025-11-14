@@ -8,22 +8,22 @@ public class CauldronBrewing : MonoBehaviour
     [Header("Inscribed")]
     [SerializeField]
     public string[] recipes;
-    public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
     public GameObject popupUI;
 
     [Header("Dynamic")]
     [SerializeField]
+    public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
     private Item currItem;
 
     public List<Item> itemList;
     public Item[] recipeResults;
     public Slot resultSlot;
     public int currIndex = -1;
+    public GameObject collidedWith;
 
     // Start is called before the first frame update
     void Start()
     {
-        popupUI = GameObject.Find("CraftingMenu");
         // Initially hide popup
         if(popupUI != null)
         {
@@ -41,6 +41,13 @@ public class CauldronBrewing : MonoBehaviour
     //Need an OnColl Script here for an Item, place into slots up to index 2
     //If over index 2, make a popup saying "The Cauldron is Full!!"
     void OnCollisionEnter(Collision coll){
+        collidedWith = coll.gameObject;
+        // Display the UI if collide with player
+        if(collidedWith.layer == LayerMask.NameToLayer("Cat"))
+        {
+            popupUI.SetActive(true);
+        }
+
         // Find out what collided with the Cauldron
 
         //If an Ingredient, handle as follows.
@@ -62,13 +69,6 @@ public class CauldronBrewing : MonoBehaviour
             currItem = null;
             //Destroy currItem gameObj.
             Destroy(coll.gameObject);
-        }
-
-        //If Player Character, activate popup hoverover ui
-        //
-        if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
-        {
-            popupUI.SetActive(true);
         }
     }
     //Need an OnColl Check for the player, make the UI popup if the player is colliding

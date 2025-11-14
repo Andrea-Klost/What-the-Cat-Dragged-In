@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2739895600759801422}
   - component: {fileID: 747593732627562041}
   - component: {fileID: 5032642878253322303}
+  - component: {fileID: 127928771182715344}
   m_Layer: 9
-  m_Name: Cylinder
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7147431175290036263}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2739895600759801422
 MeshFilter:
@@ -98,6 +99,27 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &127928771182715344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438158167756961453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bcf12a7597d004a81a9d19b12a5327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipes: []
+  brewingSlots: []
+  popupUI: {fileID: 0}
+  currItem: {fileID: 0}
+  itemList: []
+  recipeResults: []
+  resultSlot: {fileID: 0}
+  currIndex: -1
+  collidedWith: {fileID: 0}
 --- !u!1 &7147431175289617409
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7147431175290036263}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7147431175286644739
 MeshFilter:
@@ -212,7 +234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7147431175290036263}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7147431175286644741
 MeshFilter:
@@ -296,7 +318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7147431175290036263}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7147431175286644743
 MeshFilter:
@@ -393,10 +415,10 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 413668570670536806}
   - {fileID: 7147431175290036261}
   - {fileID: 7147431175290036259}
   - {fileID: 7147431175290036257}
-  - {fileID: 413668570670536806}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -447,6 +469,7 @@ MonoBehaviour:
   recipeResults: []
   resultSlot: {fileID: 0}
   currIndex: -1
+  collidedWith: {fileID: 0}
 --- !u!136 &1371933997773506927
 CapsuleCollider:
   m_ObjectHideFlags: 0
