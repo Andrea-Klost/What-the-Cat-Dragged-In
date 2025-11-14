@@ -19,7 +19,7 @@ public class CauldronBrewing : MonoBehaviour
     public Item[] recipeResults;
     public Slot resultSlot;
     public int currIndex = -1;
-    public GameObject collidedWith;
+    public string currentRecipeString = "";
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +41,9 @@ public class CauldronBrewing : MonoBehaviour
     //Need an OnColl Script here for an Item, place into slots up to index 2
     //If over index 2, make a popup saying "The Cauldron is Full!!"
     void OnCollisionEnter(Collision coll){
-        collidedWith = coll.gameObject;
+        //collidedWith = coll.gameObject;
         // Display the UI if collide with player
-        if(collidedWith.layer == LayerMask.NameToLayer("Cat"))
+        if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
         {
             popupUI.SetActive(true);
         }
@@ -89,7 +89,7 @@ public class CauldronBrewing : MonoBehaviour
         resultSlot.gameObject.SetActive(false);
         resultSlot.item = null;
 
-        string currentRecipeString = "";
+        currentRecipeString = "";
         foreach(Item item in itemList){
             if(item != null){
                 currentRecipeString += item.itemName;
@@ -102,9 +102,22 @@ public class CauldronBrewing : MonoBehaviour
                     resultSlot.gameObject.SetActive(true);
                     resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
                     resultSlot.item = recipeResults[i];
+                    break;
                 }
             }
         }
+
+    }
+
+    public void CheckAndInstantiate()
+    {
+        if((currentRecipeString == "") || (currentRecipeString == "nullnullnull"))
+        {
+            return; // Cancel this function if the string is empty or full of null cases.
+        }
+
+        //Should be a way here to check for single cases, but for now...
+
         //Run string through if statements that cover edge cases
         //Example Case
         //case: BananaBread || BreadBanana || BreadBananaNull || etc.
@@ -113,7 +126,6 @@ public class CauldronBrewing : MonoBehaviour
             //Instantiate BananaBread or in this case a Potion!
         }
     }
-
     //void OnSlotFill(Slot slot){
     //    slot.item = null;
     //    itemList[slot.index] = null;
