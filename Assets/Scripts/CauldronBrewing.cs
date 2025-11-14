@@ -132,24 +132,4 @@ public class CauldronBrewing : MonoBehaviour
     //    slot.gameObject.SetActive(false);
     //    CheckForCreatedRecipes();
     //}
-
-    //  This part may need put into its own script as this will have a 
-    //  MouseHoverOver and MouseOnClick updating the sprites
-    //  See Cancel1-Cancel3 and Confirm1
-
-    //  BOTH should set currIndex to 0 after being clicked
-    //  Confirm should only do it if there's a valid recipe
-
-    //  Very Arbitrary Code here, will need to check for cancel
-    //  removing all Items, tutorial/instruction manual will explain that removing all items will destroy them.
-    //  On Cancel
-
-    //  Will also need to check if Confirm sign is clicked:
-    //  instantiate new object based on matching Tag with Itemname
-    // OnConfirm(){
-    //  
-    //  
-    //  
-    //  
-    //}
 }
