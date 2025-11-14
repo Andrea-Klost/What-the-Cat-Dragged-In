@@ -48,8 +48,6 @@ public class CauldronBrewing : MonoBehaviour
             popupUI.SetActive(true);
         }
 
-        // Find out what collided with the Cauldron
-
         //If an Ingredient, handle as follows.
         //Insert gameobj into slot as a sprite.
         if ((coll.gameObject.layer == LayerMask.NameToLayer("Ingredient")) && (currIndex < 3))
@@ -69,6 +67,8 @@ public class CauldronBrewing : MonoBehaviour
             currItem = null;
             //Destroy currItem gameObj.
             Destroy(coll.gameObject);
+            //Check if a recipe can be made
+            CheckForCreatedRecipes();
         }
     }
     //Need an OnColl Check for the player, make the UI popup if the player is colliding
@@ -83,39 +83,57 @@ public class CauldronBrewing : MonoBehaviour
         }
     }
 
-    
+    // Refer to the video at 8:55
+    // Will Pick up back here
+    void CheckForCreatedRecipes(){
+        resultSlot.gameObject.SetActive(false);
+        resultSlot.item = null;
 
-    //void CheckForCreatedRecipes(){
-    // resultSlot.gameObject.SetActive(false);
-    // resultSlot.item = null;
-    // string currentRecipeString = "";
-    // foreach(Item item in itemList){
-    //  if(item != null){
-    //      currentRecipeString += item.itemName;
-    //  }
-    //  else{
-    //      currentRecipeString += "null";
-    //  }
-    //  for(int i = 0; i < recipes.Length; i++){
-    //      if(recipes[i] == currentRecipeString){
-    //          resultSlot.gameObject.SetActive(true);
-    //          resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
-    //          resultSlot.item = recipeResults[i];
-    //      }
-    //  }
-    //
-    // }
+        string currentRecipeString = "";
+        foreach(Item item in itemList){
+            if(item != null){
+                currentRecipeString += item.itemName;
+            }
+            else{
+                currentRecipeString += "null";
+            }
+            for(int i = 0; i < recipes.Length; i++){
+                if(recipes[i] == currentRecipeString){
+                    resultSlot.gameObject.SetActive(true);
+                    resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
+                    resultSlot.item = recipeResults[i];
+                }
+            }
+        }
+        //Run string through if statements that cover edge cases
+        //Example Case
+        //case: BananaBread || BreadBanana || BreadBananaNull || etc.
+        if(currentRecipeString.Contains("Bread") && currentRecipeString.Contains("Banana"))
+        {
+            //Instantiate BananaBread or in this case a Potion!
+        }
+    }
+
+    //void OnSlotFill(Slot slot){
+    //    slot.item = null;
+    //    itemList[slot.index] = null;
+    //    slot.gameObject.SetActive(false);
+    //    CheckForCreatedRecipes();
     //}
+
+    //  This part may need put into its own script as this will have a 
+    //  MouseHoverOver and MouseOnClick updating the sprites
+    //  See Cancel1-Cancel3 and Confirm1
+
+    //  BOTH should set currIndex to 0 after being clicked
+    //  Confirm should only do it if there's a valid recipe
+
     //  Very Arbitrary Code here, will need to check for cancel
     //  removing all Items, tutorial/instruction manual will explain that removing all items will destroy them.
-    
-    // OnSlotFill(Slot slot){
-    // slot.item = null;
-    // itemList[slot.index] = null;
-    // slot.gameObject.SetActive(false);
-    // CheckForCreatedRecipes();
-    //}
+    //  On Cancel
 
+    //  Will also need to check if Confirm sign is clicked:
+    //  instantiate new object based on matching Tag with Itemname
     // OnConfirm(){
     //  
     //  
