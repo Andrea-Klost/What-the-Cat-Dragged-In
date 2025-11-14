@@ -72,8 +72,6 @@ public class CauldronBrewing : MonoBehaviour
             CheckForCreatedRecipes();
         }
     }
-    //Need an OnColl Check for the player, make the UI popup if the player is colliding
-    //with Cauldron radius
 
     void OnCollisionExit(Collision coll)
     {
