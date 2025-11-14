@@ -5,61 +5,30 @@ using UnityEngine.UI;
 
 public class CauldronBrewing : MonoBehaviour
 {
+    [Header("Inscribed")]
+    [SerializeField]
+    public string[] recipes;
+    public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
+    public GameObject popupUI;
+
+    [Header("Dynamic")]
+    [SerializeField]
     private Item currItem;
 
     public List<Item> itemList;
-    public string[] recipes;
     public Item[] recipeResults;
-    
-    public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
     public Slot resultSlot;
     public int currIndex = -1;
-
-    //Need a script to cancel, removing all Items, tutorial/instruction manual
-    //will explain that removing all items will destroy them.
-
-    //void CheckForCreatedRecipes(){
-    // resultSlot.gameObject.SetActive(false);
-    // resultSlot.item = null;
-    // string currentRecipeString = "";
-    // foreach(Item item in itemList){
-    //  if(item != null){
-    //      currentRecipeString += item.itemName;
-    //  }
-    //  else{
-    //      currentRecipeString += "null";
-    //  }
-    //  for(int i = 0; i < recipes.Length; i++){
-    //      if(recipes[i] == currentRecipeString){
-    //          resultSlot.gameObject.SetActive(true);
-    //          resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
-    //          resultSlot.item = recipeResults[i];
-    //      }
-    //  }
-    //
-    // }
-    //}
-    //  Very Arbitrary Code here, will need to check for cancel
-    //  removing all Items, tutorial/instruction manual will explain that removing all items will destroy them.
-    
-    // OnSlotFill(Slot slot){
-    // slot.item = null;
-    // itemList[slot.index] = null;
-    // slot.gameObject.SetActive(false);
-    // CheckForCreatedRecipes();
-    //}
-
-    // OnConfirm(){
-    //  
-    //  
-    //  
-    //  
-    //}
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        popupUI = GameObject.Find("CraftingMenu");
+        // Initially hide popup
+        if(popupUI != null)
+        {
+            popupUI.SetActive(false); // Toggle Visibility
+        }
     }
 
     // Update is called once per frame
@@ -99,7 +68,7 @@ public class CauldronBrewing : MonoBehaviour
         //
         if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
         {
-            
+            popupUI.SetActive(true);
         }
     }
     //Need an OnColl Check for the player, make the UI popup if the player is colliding
@@ -110,7 +79,47 @@ public class CauldronBrewing : MonoBehaviour
         //If Cat exits, deactivate popup hoverover ui
         if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
         {
-            
+            popupUI.SetActive(false);
         }
     }
+
+    
+
+    //void CheckForCreatedRecipes(){
+    // resultSlot.gameObject.SetActive(false);
+    // resultSlot.item = null;
+    // string currentRecipeString = "";
+    // foreach(Item item in itemList){
+    //  if(item != null){
+    //      currentRecipeString += item.itemName;
+    //  }
+    //  else{
+    //      currentRecipeString += "null";
+    //  }
+    //  for(int i = 0; i < recipes.Length; i++){
+    //      if(recipes[i] == currentRecipeString){
+    //          resultSlot.gameObject.SetActive(true);
+    //          resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
+    //          resultSlot.item = recipeResults[i];
+    //      }
+    //  }
+    //
+    // }
+    //}
+    //  Very Arbitrary Code here, will need to check for cancel
+    //  removing all Items, tutorial/instruction manual will explain that removing all items will destroy them.
+    
+    // OnSlotFill(Slot slot){
+    // slot.item = null;
+    // itemList[slot.index] = null;
+    // slot.gameObject.SetActive(false);
+    // CheckForCreatedRecipes();
+    //}
+
+    // OnConfirm(){
+    //  
+    //  
+    //  
+    //  
+    //}
 }
