@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class SpriteInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class SpriteInteraction : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
+IPointerDownHandler, IPointerUpHandler
 {
     [Header("Inscribed")]
     [SerializeField]
@@ -33,19 +34,30 @@ public class SpriteInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void OnPointerEnter(PointerEventData eventData)
     {
         //  Called when the mouse enters the collider of this GameObject
-        
+        if(hoverSprite != null)
+        {
+            buttonImage.sprite = hoverSprite;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         //Called when the mouse exits the collider of this GameObject
-        
+        if(defaultSprite != null)
+        {
+            buttonImage.sprite = defaultSprite;
+        }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
-        //Called when the mouse button is pressed while over the collider of this GameObject
-        
+        if(clickedSprite != null)
+        {
+            buttonImage.sprite = clickedSprite;
+        }
+
+        //Continue Here
+        /*
         //If GameObject is Confirm, CheckAndInstantiate game object based on recipe.
         if(thisButton.name == "Confirm"){
             cauldron.CheckAndInstantiate();
@@ -57,5 +69,14 @@ public class SpriteInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
         cauldron.resultSlot = null;
         cauldron.currIndex = -1;
         cauldron.currentRecipeString = "";
+        */
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (defaultSprite != null)
+        {
+            buttonImage.sprite = defaultSprite; // Revert to the original sprite
+        }
     }
 }

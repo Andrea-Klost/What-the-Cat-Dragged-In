@@ -83,8 +83,8 @@ public class CauldronBrewing : MonoBehaviour
         }
     }
 
-    // Refer to the video at 8:55
-    // Will Pick up back here
+    // Refer to the video https://youtu.be/1fbd-yTcMgY at 8:55
+    // Continue Here
     void CheckForCreatedRecipes(){
         resultSlot.gameObject.SetActive(false);
         resultSlot.item = null;
