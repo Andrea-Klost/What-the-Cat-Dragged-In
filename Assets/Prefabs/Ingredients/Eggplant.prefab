@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3060043062978846878}
   - component: {fileID: 842797896}
   - component: {fileID: 842797900}
+  - component: {fileID: 1929750774548685132}
   m_Layer: 10
   m_Name: Eggplant
   m_TagString: Eggplant
@@ -114,6 +115,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486619007511677}
+--- !u!114 &1929750774548685132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4379873299882975989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: 62426bcb70be5874a906bdc260711ec6, type: 3}
 --- !u!1001 &225638113
 PrefabInstance:
   m_ObjectHideFlags: 0

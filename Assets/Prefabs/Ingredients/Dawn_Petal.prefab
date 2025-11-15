@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5255853634074622948}
   - component: {fileID: 944789882}
   - component: {fileID: 944789886}
+  - component: {fileID: 4496901320792123262}
   m_Layer: 10
   m_Name: Dawn_Petal
   m_TagString: Dawn_Petal
@@ -113,6 +114,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486618828775572}
+--- !u!114 &4496901320792123262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048465659604048433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: bd00cfa3f8209884ea90a61d040c8903, type: 3}
 --- !u!1001 &278641160
 PrefabInstance:
   m_ObjectHideFlags: 0
