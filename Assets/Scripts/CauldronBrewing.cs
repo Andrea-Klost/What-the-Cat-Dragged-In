@@ -63,7 +63,7 @@ public class CauldronBrewing : MonoBehaviour {
             slotsNames[0] = brewingSlots[0].transform.Find("Name").GetComponent<Text>();
             slotsNames[1] = brewingSlots[1].transform.Find("Name").GetComponent<Text>();
             slotsNames[2] = brewingSlots[2].transform.Find("Name").GetComponent<Text>();
-            
+
             for(int i = 0; i < 3; ++i)
             {
                 if(slotsNames[i] != null)
@@ -71,11 +71,28 @@ public class CauldronBrewing : MonoBehaviour {
                     slotsNames[i].text = brewingSlots[i].itemName;
                 }
             }
-
-            // If Item has a sprite, set slot to sprite
-            if (collItem.itemSprite != null)
-                brewingSlots[currIndex].GetComponent<Image>().sprite = collItem.itemSprite;
-            
+            //Set Slot Sprites
+            int increment = 0;
+            string temp;
+            foreach(string item in itemList){
+                try
+                {
+                    temp = "Assets/Resources/Ingredient_Icons/" + item + ".png";
+                    Debug.Log(temp);
+                    // If Item has a sprite, set slot to sprite
+                    //  Sprite Renderer doesn't work proper, will come back here!
+                    if ((collItem.itemSprite) != null && (increment < 3))
+                        brewingSlots[increment].GetComponent<Image>().sprite = Resources.Load<Sprite>(temp);
+                }
+                catch(Exception error)
+                {
+                    // If a Sprite invalid set to default sprite.
+                    Debug.Log(error);
+                    brewingSlots[increment].SetDefaultSprite();
+                }
+                ++increment;
+            }
+            increment = 0;
             //Destroy currItem gameObj.
             Destroy(coll.gameObject);
             //Check if a recipe can be made
@@ -141,7 +158,7 @@ public class CauldronBrewing : MonoBehaviour {
     void ClearSlots() {
         foreach (Slot s in brewingSlots) {
             s.itemName = "";
-            s.GetComponent<Image>().sprite = s.defaultSprite;
+            s.SetDefaultSprite();
         }
         ClearResultSlot();
         
