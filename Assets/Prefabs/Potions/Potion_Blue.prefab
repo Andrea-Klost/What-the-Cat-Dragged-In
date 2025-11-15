@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1812112895916098017}
   - component: {fileID: -7816959095022158612}
   - component: {fileID: -1714157140685983425}
-  - component: {fileID: 7472907605264240338}
   m_Layer: 10
   m_Name: Potion_Blue
   m_TagString: Untagged
@@ -101,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipe:
-  - Bag_O_Corn
+  - Eggplant
+  - Triangle_Shroom
   potionSprite: {fileID: 21300000, guid: bf59b6858e409144e9afaca4ee16839c, type: 3}
 --- !u!114 &-7816959095022158612
 MonoBehaviour:
@@ -129,20 +129,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7900665, y: 3.3734472, z: 2.7867706}
   m_Center: {x: 0.0000002980232, y: 0.010774075, z: 0.007342636}
---- !u!114 &7472907605264240338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8640643562761397974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ef4012ba118574cad7d3f95aa16493, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipe: []
-  potionSprite: {fileID: 21300000, guid: bf59b6858e409144e9afaca4ee16839c, type: 3}
 --- !u!1001 &183093911207457404
 PrefabInstance:
   m_ObjectHideFlags: 0

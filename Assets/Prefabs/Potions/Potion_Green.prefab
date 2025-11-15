@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -7941963481729713155}
   - component: {fileID: 2672739233371664735}
   - component: {fileID: -7656304039421405367}
-  - component: {fileID: 7817323465920866749}
   m_Layer: 10
   m_Name: Potion_Green
   m_TagString: Untagged
@@ -100,7 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ef4012ba118574cad7d3f95aa16493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipe: []
+  recipe:
+  - Dawn_Petal
+  - Bag_O_Corn
+  - Triangle_Shroom
   potionSprite: {fileID: 21300000, guid: 8020f106af3bc2544bf06451e0e5bed0, type: 3}
 --- !u!114 &2672739233371664735
 MonoBehaviour:
@@ -128,20 +130,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7900665, y: 3.3734472, z: 2.7867706}
   m_Center: {x: 0.0000002980232, y: 0.010774075, z: 0.007342636}
---- !u!114 &7817323465920866749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7359110957414609843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ef4012ba118574cad7d3f95aa16493, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipe: []
-  potionSprite: {fileID: 0}
 --- !u!1001 &3979517217729672746
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipes:
   - {fileID: 1812112895916098017, guid: b50eee7798827ec43b6f90dcd6eac1e7, type: 3}
+  - {fileID: -7941963481729713155, guid: efb4330cc153bbf40b1facb3a7d68d58, type: 3}
+  - {fileID: 8006963418564753850, guid: 771a3f4bc7480224e958b170ba2396ba, type: 3}
   popupUI: {fileID: 0}
   potionSpawnPoint: {fileID: 2090619255}
   brewingSlots:

@@ -17,8 +17,9 @@ public class CauldronBrewing : MonoBehaviour {
     public Slot resultSlot;
     
     [Header("Dynamic")] 
-    [SerializeField] private List<String> itemList;
-
+    [SerializeField] 
+    private List<String> itemList;
+    Text [] slotsNames; //Refers to the name textbox under slot.
     void Awake() {
         if (potionSpawnPoint == null)
             potionSpawnPoint = this.transform;
@@ -31,6 +32,7 @@ public class CauldronBrewing : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        slotsNames = new Text[3];
         // Initially hide popup
         if(popupUI != null)
         {
@@ -57,7 +59,19 @@ public class CauldronBrewing : MonoBehaviour {
             brewingSlots[currIndex].index = currIndex;
             itemList.Add(collItem.itemName);
             itemList.Sort();
+            //  Set Slot Texts.
+            slotsNames[0] = brewingSlots[0].transform.Find("Name").GetComponent<Text>();
+            slotsNames[1] = brewingSlots[1].transform.Find("Name").GetComponent<Text>();
+            slotsNames[2] = brewingSlots[2].transform.Find("Name").GetComponent<Text>();
             
+            for(int i = 0; i < 3; ++i)
+            {
+                if(slotsNames[i] != null)
+                {
+                    slotsNames[i].text = brewingSlots[i].itemName;
+                }
+            }
+
             // If Item has a sprite, set slot to sprite
             if (collItem.itemSprite != null)
                 brewingSlots[currIndex].GetComponent<Image>().sprite = collItem.itemSprite;
@@ -131,6 +145,8 @@ public class CauldronBrewing : MonoBehaviour {
         }
         ClearResultSlot();
         
+        //  Reset slotsNames.
+        slotsNames[0].text = "Ingredient 1"; slotsNames[1].text = "Ingredient 2"; slotsNames[2].text = "Ingredient 3";
         itemList.Clear();
     }
 
