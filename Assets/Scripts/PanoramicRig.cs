@@ -11,6 +11,11 @@ public class PanoramicRig : MonoBehaviour
     public float orbitSpeedDegPerSec = 8f;   // how fast we spin around Y
     public bool clockwise = true;
 
+    [Header("Direction Flip")]
+    public bool flipDirection = false;       // enable to auto-flip CW/CCW
+    public float flipIntervalSeconds = 3f;   // how often to flip
+    
+
     [Header("Rig Radius (distance to target)")]
     public float radius = 8f;           // camera distance from target
     public bool pulseRadius = true;     // gentle breathing zoom
@@ -32,6 +37,7 @@ public class PanoramicRig : MonoBehaviour
 
     Transform _cam;  // child camera
     float _phase;
+    float _timeSinceFlip;               // timer for direction flipping
 
     void Reset()
     {
@@ -57,8 +63,20 @@ public class PanoramicRig : MonoBehaviour
         if (!_cam || !target) return;
 
         float dt = useUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
+
         if (isPlaying)
         {
+            // --- Direction flip timer ---
+            if (flipDirection && flipIntervalSeconds > 0f)
+            {
+                _timeSinceFlip += dt;
+                if (_timeSinceFlip >= flipIntervalSeconds)
+                {
+                    clockwise = !clockwise;   // swap direction
+                    _timeSinceFlip = 0f;
+                }
+            }
+
             // 1) Orbit the rig around the target on Y
             float dir = clockwise ? -1f : 1f;
             transform.RotateAround(target.position, Vector3.up, dir * orbitSpeedDegPerSec * dt);

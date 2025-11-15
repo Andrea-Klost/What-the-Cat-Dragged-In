@@ -9,7 +9,7 @@ public class UIBezierRoad : MaskableGraphic
     [Header("Endpoints (UI)")]
     public RectTransform from;          //LevelNode_1
     public RectTransform to;            // LevelNode_2
-    public Canvas canvas;               // LevelSelect/canvas
+    public new Canvas canvas;               // LevelSelect/canvas
 
 
     [Header("Shape")]
