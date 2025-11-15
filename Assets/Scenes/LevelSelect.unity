@@ -2110,6 +2110,8 @@ MonoBehaviour:
   lookAtOffset: {x: 2, y: 2, z: 2}
   orbitSpeedDegPerSec: 8
   clockwise: 1
+  flipDirection: 0
+  flipIntervalSeconds: 3
   radius: 8
   pulseRadius: 1
   radiusPulseAmplitude: 0.35
@@ -2152,7 +2154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5980079812121955764, guid: 6bdcec694cf1dd8468d7bdc5c6ff6523, type: 3}
       propertyPath: sceneName
-      value: Level1-map
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 5980079812121955767, guid: 6bdcec694cf1dd8468d7bdc5c6ff6523, type: 3}
       propertyPath: m_Pivot.x
