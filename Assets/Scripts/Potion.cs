@@ -7,11 +7,8 @@ public class Potion : MonoBehaviour {
     public List<string> recipe;
     public Sprite potionSprite;
     
-    void Awake() {
-        recipe.Sort();    
-    }
-
     public string RecipeString() {
+        recipe.Sort();
         string recipeString = "";
         foreach (string item in recipe) {
             recipeString += item;
