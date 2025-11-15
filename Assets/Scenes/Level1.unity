@@ -21154,10 +21154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1923085513, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
       propertyPath: popupUI
       value: 
@@ -21168,12 +21164,16 @@ PrefabInstance:
       objectReference: {fileID: 673912680}
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
       propertyPath: recipes.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
-      propertyPath: recipes.Array.data[0]
+      propertyPath: recipes.Array.data[1]
       value: 
-      objectReference: {fileID: 1812112895916098017, guid: b50eee7798827ec43b6f90dcd6eac1e7, type: 3}
+      objectReference: {fileID: -7941963481729713155, guid: efb4330cc153bbf40b1facb3a7d68d58, type: 3}
+    - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
+      propertyPath: recipes.Array.data[2]
+      value: 
+      objectReference: {fileID: 8006963418564753850, guid: 771a3f4bc7480224e958b170ba2396ba, type: 3}
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
       propertyPath: brewingSlots.Array.data[0]
       value: 
