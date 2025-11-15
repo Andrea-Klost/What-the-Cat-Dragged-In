@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CauldronBrewing : MonoBehaviour {
     private static CauldronBrewing instance; // Singleton class, will only be one cauldron
@@ -17,9 +16,8 @@ public class CauldronBrewing : MonoBehaviour {
     public Slot resultSlot;
     
     [Header("Dynamic")] 
-    [SerializeField] 
-    private List<String> itemList;
-    Text [] slotsNames; //Refers to the name textbox under slot.
+    [SerializeField] private List<String> itemList;
+    
     void Awake() {
         if (potionSpawnPoint == null)
             potionSpawnPoint = this.transform;
@@ -32,7 +30,6 @@ public class CauldronBrewing : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        slotsNames = new Text[3];
         // Initially hide popup
         if(popupUI != null)
         {
@@ -57,42 +54,17 @@ public class CauldronBrewing : MonoBehaviour {
             // Setup next slot
             brewingSlots[currIndex].itemName = collItem.itemName;
             brewingSlots[currIndex].index = currIndex;
+            brewingSlots[currIndex].SetLabel(collItem.itemName.Replace('_', ' '));
+            
+            // Add to list
             itemList.Add(collItem.itemName);
             itemList.Sort();
-            //  Set Slot Texts.
-            slotsNames[0] = brewingSlots[0].transform.Find("Name").GetComponent<Text>();
-            slotsNames[1] = brewingSlots[1].transform.Find("Name").GetComponent<Text>();
-            slotsNames[2] = brewingSlots[2].transform.Find("Name").GetComponent<Text>();
-
-            for(int i = 0; i < 3; ++i)
-            {
-                if(slotsNames[i] != null)
-                {
-                    slotsNames[i].text = brewingSlots[i].itemName;
-                }
-            }
-            //Set Slot Sprites
-            int increment = 0;
-            string temp;
-            foreach(string item in itemList){
-                try
-                {
-                    temp = "Assets/Resources/Ingredient_Icons/" + item + ".png";
-                    Debug.Log(temp);
-                    // If Item has a sprite, set slot to sprite
-                    //  Sprite Renderer doesn't work proper, will come back here!
-                    if ((collItem.itemSprite) != null && (increment < 3))
-                        brewingSlots[increment].GetComponent<Image>().sprite = Resources.Load<Sprite>(temp);
-                }
-                catch(Exception error)
-                {
-                    // If a Sprite invalid set to default sprite.
-                    Debug.Log(error);
-                    brewingSlots[increment].SetDefaultSprite();
-                }
-                ++increment;
-            }
-            increment = 0;
+            
+            
+            // If Item has a sprite, set slot to sprite
+            if (collItem.itemSprite != null)
+                brewingSlots[currIndex].SetSprite(collItem.itemSprite);
+            
             //Destroy currItem gameObj.
             Destroy(coll.gameObject);
             //Check if a recipe can be made
@@ -121,7 +93,7 @@ public class CauldronBrewing : MonoBehaviour {
         for(int i = 0; i < recipes.Length; i++){
             if(recipes[i].RecipeString() == currRecipeString) {
                 resultSlot.gameObject.SetActive(true);
-                resultSlot.GetComponent<Image>().sprite = recipes[i].potionSprite;
+                resultSlot.SetSprite(recipes[i].potionSprite);
                 resultSlot.itemName = recipes[i].name;
                 return;
             }
@@ -159,18 +131,18 @@ public class CauldronBrewing : MonoBehaviour {
         foreach (Slot s in brewingSlots) {
             s.itemName = "";
             s.SetDefaultSprite();
+            s.SetDefaultLabel();
         }
         ClearResultSlot();
         
-        //  Reset slotsNames.
-        slotsNames[0].text = "Ingredient 1"; slotsNames[1].text = "Ingredient 2"; slotsNames[2].text = "Ingredient 3";
         itemList.Clear();
     }
 
     void ClearResultSlot() {
         resultSlot.gameObject.SetActive(false);
         resultSlot.itemName = "";
-        resultSlot.GetComponent<Image>().sprite = resultSlot.defaultSprite;
+        resultSlot.SetDefaultSprite();
+        resultSlot.SetDefaultLabel();
     }
     
     public static void ON_BUTTON_CONFIRM() {
