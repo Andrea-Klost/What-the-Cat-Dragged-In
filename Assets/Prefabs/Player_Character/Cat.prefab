@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2845296090245179557}
   - component: {fileID: 7454814216549809525}
   - component: {fileID: 248275640}
+  - component: {fileID: 1605664818}
   m_Layer: 8
   m_Name: Cat
   m_TagString: Untagged
@@ -106,7 +107,7 @@ MonoBehaviour:
   colliderRadius: 0.5
   frontPosition: {fileID: 2140491931891514718}
   backPosition: {fileID: 6460369462058430665}
-  rotateSpeed: 6
+  rotateSpeed: 12
 --- !u!136 &7454814216549809525
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -134,6 +135,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9, z: 1}
   m_Center: {x: 0, y: 0.5, z: 1}
+--- !u!114 &1605664818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2845296090245179558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.6698113, g: 0.405554, b: 0.11058204, a: 1}
+  outlineWidth: 2.82
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8267308428865286341
 GameObject:
   m_ObjectHideFlags: 0
