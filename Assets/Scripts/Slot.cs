@@ -2,19 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slot : MonoBehaviour
-{
-    public Item item;
+public class Slot : MonoBehaviour {
+    public Sprite defaultSprite;
+    public string itemName; // Cannot be item since item ref will be destroyed when the item gameobject is destroyed
     public int index; // Max of 4, 0-2 is Ingredients, 3 is Output.
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

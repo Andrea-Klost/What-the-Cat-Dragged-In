@@ -9,8 +9,6 @@ public class SpriteInteraction : MonoBehaviour, IPointerEnterHandler, IPointerEx
 IPointerDownHandler, IPointerUpHandler
 {
     [Header("Inscribed")]
-    [SerializeField]
-    public CauldronBrewing cauldron;
     public Sprite defaultSprite;
     public Sprite hoverSprite;
     public Sprite clickedSprite;
@@ -55,21 +53,6 @@ IPointerDownHandler, IPointerUpHandler
         {
             buttonImage.sprite = clickedSprite;
         }
-
-        //Continue Here
-        /*
-        //If GameObject is Confirm, CheckAndInstantiate game object based on recipe.
-        if(thisButton.name == "Confirm"){
-            cauldron.CheckAndInstantiate();
-        }
-        // Then clear everything, will only clear if cancel is clicked.
-        Array.Clear(cauldron.brewingSlots, 0, cauldron.brewingSlots.Length);
-        cauldron.itemList.Clear();
-        Array.Clear(cauldron.recipeResults, 0, cauldron.brewingSlots.Length);
-        cauldron.resultSlot = null;
-        cauldron.currIndex = -1;
-        cauldron.currentRecipeString = "";
-        */
     }
 
     public void OnPointerUp(PointerEventData eventData)

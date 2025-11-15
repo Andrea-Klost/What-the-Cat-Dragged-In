@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8678306938583777529}
   - component: {fileID: 1597798774}
   - component: {fileID: 1597798778}
+  - component: {fileID: 5330813746898770297}
   m_Layer: 10
   m_Name: Cattail
   m_TagString: Cattail
@@ -113,6 +114,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486618992828684}
+--- !u!114 &5330813746898770297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165075679891398956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
 --- !u!1001 &240319376
 PrefabInstance:
   m_ObjectHideFlags: 0

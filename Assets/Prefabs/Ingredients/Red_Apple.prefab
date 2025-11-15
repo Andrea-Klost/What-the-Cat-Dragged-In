@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6232655175522875274}
   - component: {fileID: 1747745635}
   - component: {fileID: 1747745639}
+  - component: {fileID: 5729149715394874009}
   m_Layer: 10
   m_Name: Red_Apple
   m_TagString: Red_Apple
@@ -114,6 +115,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486618884301910}
+--- !u!114 &5729149715394874009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325747696722736540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: 38f4681a267270a46995ae154330c2c4, type: 3}
 --- !u!1001 &338362058
 PrefabInstance:
   m_ObjectHideFlags: 0

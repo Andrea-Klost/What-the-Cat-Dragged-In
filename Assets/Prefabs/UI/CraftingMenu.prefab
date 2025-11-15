@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b746fe6174d649bd80b0b33341ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 39397f59d801cd2468c435e5523cfad7, type: 3}
+  itemName: 
   index: 1
 --- !u!1 &985419542002590808
 GameObject:
@@ -208,7 +209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -484.0001, y: -113.99996}
+  m_AnchoredPosition: {x: -484.00012, y: -113.99997}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4797827598592094964
@@ -284,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3442614778715069009
@@ -337,6 +338,8 @@ GameObject:
   - component: {fileID: 5419406953062394966}
   - component: {fileID: 6482335604377355077}
   - component: {fileID: 4781323920260532868}
+  - component: {fileID: 1295989337}
+  - component: {fileID: 1295989336}
   m_Layer: 5
   m_Name: Cancel
   m_TagString: Untagged
@@ -445,7 +448,57 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6482335604377355077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CauldronBrewing, Assembly-CSharp
+        m_MethodName: ON_BUTTON_CANCEL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!223 &1295989337
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514554253124702401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &1295989336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514554253124702401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &3147862249048979109
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b746fe6174d649bd80b0b33341ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  defaultSprite: {fileID: 0}
+  itemName: 
   index: 3
 --- !u!1 &3350297815838974154
 GameObject:
@@ -704,7 +758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b746fe6174d649bd80b0b33341ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 3e7890462ac51864b95802a23235bf41, type: 3}
+  itemName: 
   index: 3
 --- !u!1 &3894966929121832561
 GameObject:
@@ -797,7 +852,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b746fe6174d649bd80b0b33341ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 39397f59d801cd2468c435e5523cfad7, type: 3}
+  itemName: 
   index: 2
 --- !u!1 &4279377399917585487
 GameObject:
@@ -1125,6 +1181,8 @@ GameObject:
   - component: {fileID: 6021291736279979247}
   - component: {fileID: 9010962697402365082}
   - component: {fileID: 7652416446705858675}
+  - component: {fileID: 838262216}
+  - component: {fileID: 838262215}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -1233,7 +1291,57 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9010962697402365082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CauldronBrewing, Assembly-CSharp
+        m_MethodName: ON_BUTTON_CONFIRM
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!223 &838262216
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433610695888217533}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &838262215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433610695888217533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &7544177038183144593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1353,7 @@ GameObject:
   - component: {fileID: 2176781196573601066}
   - component: {fileID: 7057667492458529982}
   - component: {fileID: 2471650169794700197}
+  - component: {fileID: 990475545}
   m_Layer: 5
   m_Name: CraftingMenu
   m_TagString: Untagged
@@ -1294,11 +1403,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc2b26f3a62b2b4295ac4ac07a3b016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cauldron: {fileID: 0}
-  defaultSprite: {fileID: 0}
-  hoverSprite: {fileID: 0}
-  clickedSprite: {fileID: 0}
-  thisButton: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 38f4681a267270a46995ae154330c2c4, type: 3}
+  hoverSprite: {fileID: 21300000, guid: 1fe74b66588f27046ac0ea4f40dfc5b8, type: 3}
+  clickedSprite: {fileID: 21300000, guid: a12087b36fa0990479d9e7ebba7946a2, type: 3}
+  thisButton: {fileID: 7652416446705858675}
 --- !u!114 &2471650169794700197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,11 +1419,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc2b26f3a62b2b4295ac4ac07a3b016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cauldron: {fileID: 0}
-  defaultSprite: {fileID: 0}
-  hoverSprite: {fileID: 0}
-  clickedSprite: {fileID: 0}
-  thisButton: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: bb14aa8109786084eaa5ca6803553114, type: 3}
+  hoverSprite: {fileID: 21300000, guid: dd84c63bd3396cc419ef33a115419971, type: 3}
+  clickedSprite: {fileID: 21300000, guid: f28f173cd70077d498b1b4b447cc9ae5, type: 3}
+  thisButton: {fileID: 4781323920260532868}
+--- !u!223 &990475545
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544177038183144593}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &7645857621193089781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,7 +1611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3b746fe6174d649bd80b0b33341ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 39397f59d801cd2468c435e5523cfad7, type: 3}
+  itemName: 
   index: 0
 --- !u!1 &8233186326076921436
 GameObject:

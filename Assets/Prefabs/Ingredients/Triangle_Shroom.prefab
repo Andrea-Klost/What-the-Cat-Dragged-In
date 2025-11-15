@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2747790937629125201}
   - component: {fileID: 1699111298}
   - component: {fileID: 1699111302}
+  - component: {fileID: 1387413711114579286}
   m_Layer: 10
   m_Name: Triangle_Shroom
   m_TagString: Triangle_Shroom
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 2674237968940733406}
+--- !u!114 &1387413711114579286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335561408073360458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
 --- !u!1001 &703765193246574914
 PrefabInstance:
   m_ObjectHideFlags: 0

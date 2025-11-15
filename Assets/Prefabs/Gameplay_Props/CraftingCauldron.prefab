@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2090619254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090619255}
+  m_Layer: 12
+  m_Name: PotionSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2090619255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090619254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.673, y: 0.395, z: -0.297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7147431175290036263}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2438158167756961453
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +44,9 @@ GameObject:
   - component: {fileID: 747593732627562041}
   - component: {fileID: 5032642878253322303}
   - component: {fileID: 127928771182715344}
-  m_Layer: 9
+  - component: {fileID: 1923085507}
+  - component: {fileID: 1923085513}
+  m_Layer: 12
   m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,12 +126,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2438158167756961453}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 1, z: -0.00000008940697}
 --- !u!114 &127928771182715344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,15 +144,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bcf12a7597d004a81a9d19b12a5327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes: []
-  brewingSlots: []
+  recipes:
+  - {fileID: 1812112895916098017, guid: b50eee7798827ec43b6f90dcd6eac1e7, type: 3}
   popupUI: {fileID: 0}
-  currItem: {fileID: 0}
-  itemList: []
-  recipeResults: []
+  potionSpawnPoint: {fileID: 2090619255}
+  brewingSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   resultSlot: {fileID: 0}
-  currIndex: -1
-  collidedWith: {fileID: 0}
+  itemList: []
+--- !u!65 &1923085507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438158167756961453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!136 &1923085513
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438158167756961453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: -0.000000059604645, z: -0.00000008940697}
 --- !u!1 &7147431175289617409
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +192,7 @@ GameObject:
   - component: {fileID: 7147431175290036257}
   - component: {fileID: 7147431175286644739}
   - component: {fileID: 7147431175287612099}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: EA_Items_House_cauldron_soup_01a_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +275,7 @@ GameObject:
   - component: {fileID: 7147431175290036259}
   - component: {fileID: 7147431175286644741}
   - component: {fileID: 7147431175287612101}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: EA_Items_House_cauldron_soup_01a_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +359,7 @@ GameObject:
   - component: {fileID: 7147431175286644743}
   - component: {fileID: 7147431175287612103}
   - component: {fileID: 7053451760893224679}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: EA_Items_House_cauldron_soup_01a_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,9 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7147431175290036263}
   - component: {fileID: 7147431175270298759}
-  - component: {fileID: 3339147219628312154}
-  - component: {fileID: 1371933997773506927}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: CraftingCauldron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,6 +478,7 @@ Transform:
   - {fileID: 7147431175290036261}
   - {fileID: 7147431175290036259}
   - {fileID: 7147431175290036257}
+  - {fileID: 2090619255}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -449,38 +509,3 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7147431175287612099}
   m_Enabled: 1
---- !u!114 &3339147219628312154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7147431175289617415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bcf12a7597d004a81a9d19b12a5327, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipes: []
-  brewingSlots: []
-  popupUI: {fileID: 0}
-  currItem: {fileID: 0}
-  itemList: []
-  recipeResults: []
-  resultSlot: {fileID: 0}
-  currIndex: -1
-  collidedWith: {fileID: 0}
---- !u!136 &1371933997773506927
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7147431175289617415}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

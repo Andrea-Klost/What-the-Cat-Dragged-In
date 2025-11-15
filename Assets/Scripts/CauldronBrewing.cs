@@ -1,25 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CauldronBrewing : MonoBehaviour
-{
+public class CauldronBrewing : MonoBehaviour {
+    private static CauldronBrewing instance; // Singleton class, will only be one cauldron
+    
     [Header("Inscribed")]
     [SerializeField]
-    public string[] recipes;
+    public Potion[] recipes; // Prefabs of the potions, must have Potion component
     public GameObject popupUI;
-
-    [Header("Dynamic")]
-    [SerializeField]
+    public Transform potionSpawnPoint;
     public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
-    private Item currItem;
-
-    public List<Item> itemList;
-    public Item[] recipeResults;
     public Slot resultSlot;
-    public int currIndex = -1;
-    public string currentRecipeString = "";
+    
+    [Header("Dynamic")] 
+    [SerializeField] private List<String> itemList;
+
+    void Awake() {
+        if (potionSpawnPoint == null)
+            potionSpawnPoint = this.transform;
+        
+        instance = this;
+        itemList = new List<String>();
+        resultSlot.gameObject.SetActive(false);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -30,42 +37,31 @@ public class CauldronBrewing : MonoBehaviour
             popupUI.SetActive(false); // Toggle Visibility
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    // Code is based on this Tutorial : https://youtu.be/1fbd-yTcMgY 
-    //Need an OnColl Script here for an Item, place into slots up to index 2
-    //If over index 2, make a popup saying "The Cauldron is Full!!"
-    void OnCollisionEnter(Collision coll){
-        //collidedWith = coll.gameObject;
+    
+    void OnTriggerEnter(Collider coll) {
         // Display the UI if collide with player
         if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
         {
             popupUI.SetActive(true);
         }
-
-        //Continue Here
-        //If an Ingredient, handle as follows.
-        //Insert gameobj into slot as a sprite.
-        if ((coll.gameObject.layer == LayerMask.NameToLayer("Ingredient")) && (currIndex < 3))
+        
+        // If item add to list and check for a recipe match
+        Item collItem = coll.GetComponent<Item>();
+        if (collItem != null && itemList.Count < 3)
         {
-            //Increase currIndex
-            currIndex += 1;
-            //Setup nextSlot
-            Slot nextSlot = null;
-            nextSlot.index = currIndex;
-
-            //Setup currItem
-            currItem.itemName = coll.gameObject.tag;
-            //Might need a sprite component?
-            nextSlot.GetComponent<Image>().sprite = currItem.GetComponent<Image>().sprite;
-            nextSlot.item = currItem;
-            itemList[nextSlot.index] = currItem;
-            currItem = null;
+            // currIndex equal to the current amount of items in cauldron
+            int currIndex = itemList.Count;
+            
+            // Setup next slot
+            brewingSlots[currIndex].itemName = collItem.itemName;
+            brewingSlots[currIndex].index = currIndex;
+            itemList.Add(collItem.itemName);
+            itemList.Sort();
+            
+            // If Item has a sprite, set slot to sprite
+            if (collItem.itemSprite != null)
+                brewingSlots[currIndex].GetComponent<Image>().sprite = collItem.itemSprite;
+            
             //Destroy currItem gameObj.
             Destroy(coll.gameObject);
             //Check if a recipe can be made
@@ -73,8 +69,7 @@ public class CauldronBrewing : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision coll)
-    {
+    void OnTriggerExit(Collider coll) {
         //If Cat exits, deactivate popup hoverover ui
         if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
         {
@@ -82,53 +77,74 @@ public class CauldronBrewing : MonoBehaviour
         }
     }
 
-    // Refer to the video https://youtu.be/1fbd-yTcMgY at 8:55
-    // Continue Here
-    void CheckForCreatedRecipes(){
+    string CurrentRecipeString() {
+        string recipeString = "";
+        foreach (string item in itemList) {
+            recipeString += item;
+        }
+        return recipeString;
+    }
+    
+    void CheckForCreatedRecipes() {
+        string currRecipeString = CurrentRecipeString();
+        for(int i = 0; i < recipes.Length; i++){
+            if(recipes[i].RecipeString() == currRecipeString) {
+                resultSlot.gameObject.SetActive(true);
+                resultSlot.GetComponent<Image>().sprite = recipes[i].potionSprite;
+                resultSlot.itemName = recipes[i].name;
+                return;
+            }
+        }
+        // No Recipe found clear result slot
+        ClearResultSlot();
+    }
+
+    void CheckAndInstantiate() {
+        // Return if Cauldron is empty
+        if (itemList.Count == 0) {
+            return;
+        }
+        
+        string currRecipeString = CurrentRecipeString();
+        Potion matchedPotion = null;
+        foreach (Potion p in recipes) {
+            if (p.RecipeString() == currRecipeString) {
+                matchedPotion = p;
+                break;
+            } 
+        }
+        
+        // No recipes found, return 
+        if (matchedPotion == null)
+            return;
+        
+        // Spawn potion and clear all slots
+        ClearSlots();
+        GameObject potionGo = Instantiate(matchedPotion.gameObject);
+        potionGo.transform.position = potionSpawnPoint.position;
+    }
+
+    void ClearSlots() {
+        foreach (Slot s in brewingSlots) {
+            s.itemName = "";
+            s.GetComponent<Image>().sprite = s.defaultSprite;
+        }
+        ClearResultSlot();
+        
+        itemList.Clear();
+    }
+
+    void ClearResultSlot() {
         resultSlot.gameObject.SetActive(false);
-        resultSlot.item = null;
-
-        currentRecipeString = "";
-        foreach(Item item in itemList){
-            if(item != null){
-                currentRecipeString += item.itemName;
-            }
-            else{
-                currentRecipeString += "null";
-            }
-            for(int i = 0; i < recipes.Length; i++){
-                if(recipes[i] == currentRecipeString){
-                    resultSlot.gameObject.SetActive(true);
-                    resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
-                    resultSlot.item = recipeResults[i];
-                    break;
-                }
-            }
-        }
-
+        resultSlot.itemName = "";
+        resultSlot.GetComponent<Image>().sprite = resultSlot.defaultSprite;
     }
-
-    public void CheckAndInstantiate()
-    {
-        if((currentRecipeString == "") || (currentRecipeString == "nullnullnull"))
-        {
-            return; // Cancel this function if the string is empty or full of null cases.
-        }
-
-        //Should be a way here to check for single cases, but for now...
-
-        //Run string through if statements that cover edge cases
-        //Example Case
-        //case: BananaBread || BreadBanana || BreadBananaNull || etc.
-        if(currentRecipeString.Contains("Bread") && currentRecipeString.Contains("Banana"))
-        {
-            //Instantiate BananaBread or in this case a Potion!
-        }
+    
+    public static void ON_BUTTON_CONFIRM() {
+        instance.CheckAndInstantiate();
     }
-    //void OnSlotFill(Slot slot){
-    //    slot.item = null;
-    //    itemList[slot.index] = null;
-    //    slot.gameObject.SetActive(false);
-    //    CheckForCreatedRecipes();
-    //}
+    
+    public static void ON_BUTTON_CANCEL() {
+        instance.ClearSlots();
+    }
 }
