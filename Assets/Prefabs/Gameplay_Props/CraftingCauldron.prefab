@@ -44,8 +44,6 @@ GameObject:
   - component: {fileID: 747593732627562041}
   - component: {fileID: 5032642878253322303}
   - component: {fileID: 127928771182715344}
-  - component: {fileID: 1923085507}
-  - component: {fileID: 1923085513}
   m_Layer: 12
   m_Name: Controller
   m_TagString: Untagged
@@ -146,8 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipes:
   - {fileID: 1812112895916098017, guid: b50eee7798827ec43b6f90dcd6eac1e7, type: 3}
-  - {fileID: -7941963481729713155, guid: efb4330cc153bbf40b1facb3a7d68d58, type: 3}
-  - {fileID: 8006963418564753850, guid: 771a3f4bc7480224e958b170ba2396ba, type: 3}
   popupUI: {fileID: 0}
   potionSpawnPoint: {fileID: 2090619255}
   brewingSlots:
@@ -156,33 +152,6 @@ MonoBehaviour:
   - {fileID: 0}
   resultSlot: {fileID: 0}
   itemList: []
---- !u!65 &1923085507
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2438158167756961453}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!136 &1923085513
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2438158167756961453}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: -0.000000059604645, z: -0.00000008940697}
 --- !u!1 &7147431175289617409
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +329,7 @@ GameObject:
   - component: {fileID: 7147431175290036261}
   - component: {fileID: 7147431175286644743}
   - component: {fileID: 7147431175287612103}
-  - component: {fileID: 7053451760893224679}
+  - component: {fileID: 1319461687}
   m_Layer: 12
   m_Name: EA_Items_House_cauldron_soup_01a_LOD0
   m_TagString: Untagged
@@ -433,8 +402,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7053451760893224679
-MeshCollider:
+--- !u!135 &1319461687
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -443,10 +412,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: eb40964df52421b4eb9f339426df2791, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.26567936
+  m_Center: {x: 0, y: 0.21306477, z: 0.0000030323863}
 --- !u!1 &7147431175289617415
 GameObject:
   m_ObjectHideFlags: 0
