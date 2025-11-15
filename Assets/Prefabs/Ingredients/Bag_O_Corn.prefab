@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3785855710170579375}
   - component: {fileID: 1191872420}
   - component: {fileID: 1191872424}
+  - component: {fileID: 6150970794559090360}
   m_Layer: 10
   m_Name: Bag_O_Corn
   m_TagString: Bag_O_Corn
@@ -114,6 +115,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486618628334059}
+--- !u!114 &6150970794559090360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452498389250755408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: 4cab510a7b9e4374db347cf79040cbed, type: 3}
 --- !u!1001 &619264887
 PrefabInstance:
   m_ObjectHideFlags: 0
