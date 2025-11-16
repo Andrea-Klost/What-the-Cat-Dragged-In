@@ -342,13 +342,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -358,8 +358,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: dd84c63bd3396cc419ef33a115419971, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: f28f173cd70077d498b1b4b447cc9ae5, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1091,13 +1091,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1107,8 +1107,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1fe74b66588f27046ac0ea4f40dfc5b8, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: a12087b36fa0990479d9e7ebba7946a2, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1181,8 +1181,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2176781196573601066}
-  - component: {fileID: 7057667492458529982}
-  - component: {fileID: 2471650169794700197}
   - component: {fileID: 990475545}
   m_Layer: 5
   m_Name: CraftingMenu
@@ -1221,38 +1219,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7057667492458529982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7544177038183144593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc2b26f3a62b2b4295ac4ac07a3b016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 21300000, guid: 38f4681a267270a46995ae154330c2c4, type: 3}
-  hoverSprite: {fileID: 21300000, guid: 1fe74b66588f27046ac0ea4f40dfc5b8, type: 3}
-  clickedSprite: {fileID: 21300000, guid: a12087b36fa0990479d9e7ebba7946a2, type: 3}
-  thisButton: {fileID: 7652416446705858675}
---- !u!114 &2471650169794700197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7544177038183144593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc2b26f3a62b2b4295ac4ac07a3b016, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 21300000, guid: bb14aa8109786084eaa5ca6803553114, type: 3}
-  hoverSprite: {fileID: 21300000, guid: dd84c63bd3396cc419ef33a115419971, type: 3}
-  clickedSprite: {fileID: 21300000, guid: f28f173cd70077d498b1b4b447cc9ae5, type: 3}
-  thisButton: {fileID: 4781323920260532868}
 --- !u!223 &990475545
 Canvas:
   m_ObjectHideFlags: 0
