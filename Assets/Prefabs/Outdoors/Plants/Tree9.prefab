@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4810737905362934245}
   - component: {fileID: 7289036324801801519}
   - component: {fileID: 6714080372306890336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tree9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9090277920216534266}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: de788549e5d2f6541b16ef290a5d6e10, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
