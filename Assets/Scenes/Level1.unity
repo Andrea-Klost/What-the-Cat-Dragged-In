@@ -9804,7 +9804,7 @@ MonoBehaviour:
   minTimeBetweenOrders: 10
   maxTimeBetweenOrders: 30
   ingredientMultiplier: 20
-  timeThreshold: 25
+  timeThreshold: 60
   _currentOrders: []
   _timeLastOrder: 0
   _timeUntilNextOrder: 0
