@@ -121,4 +121,8 @@ public class OrderSystem : MonoBehaviour {
     public static void START_LEVEL() {
         instance.StartLevel();
     }
+
+    public static int GET_SCORE() {
+        return instance.Score;
+    }
 }
