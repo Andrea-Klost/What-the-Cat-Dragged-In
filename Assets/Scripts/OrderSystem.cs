@@ -17,6 +17,7 @@ public class OrderSystem : MonoBehaviour {
     [Header("Level")]
     [Tooltip("Time the player gets to complete the level in seconds")]
     public float timeLimit = 120;
+    public GameObject startText;
     
     [Header("Orders")]
     public int maxOrdersAtOnce = 5;
@@ -53,6 +54,7 @@ public class OrderSystem : MonoBehaviour {
 
      void Start() {
         _availableRecipes = CauldronBrewing.GET_RECIPE_LIST();
+        startText.SetActive(true);
     }
 
     void Update() {
@@ -73,6 +75,7 @@ public class OrderSystem : MonoBehaviour {
         _timeLastOrder = Time.time;
         _timeUntilNextOrder = 5;
         _levelStarted = true;
+        startText.SetActive(false);
     }
     
     void CreateNewOrder() {
