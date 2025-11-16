@@ -69,7 +69,8 @@ public class OrderSystem : MonoBehaviour {
     void StartLevel() {
         if (_levelStarted)
             return;
-        
+
+        _timeLastOrder = Time.time;
         _timeUntilNextOrder = 5;
         _levelStarted = true;
     }
