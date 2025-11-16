@@ -52,11 +52,13 @@ public class Cat : MonoBehaviour {
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection,
             singleStep, 0f);
         transform.rotation = Quaternion.LookRotation(newDirection);
-
+        
         if (Input.GetKeyDown("space"))
             Jump();
         if (Input.GetKeyDown("o"))
             Grab();
+        if (Input.GetKeyDown("return"))
+            OrderSystem.START_LEVEL();
     }
 
     void Jump() {
