@@ -16,7 +16,7 @@ public class OrderSystem : MonoBehaviour {
     
     [Header("Level")]
     [Tooltip("Time the player gets to complete the level in seconds")]
-    public float timeLimit = 120;
+    public float timeLimit = 300;
     public GameObject startText;
     
     [Header("Orders")]
@@ -34,7 +34,10 @@ public class OrderSystem : MonoBehaviour {
     [SerializeField] private List<Order> _currentOrders;
     [SerializeField] private float _timeLastOrder;
     [SerializeField] private float _timeUntilNextOrder;
+    [SerializeField] private float _timeStart;
     [SerializeField] private bool _levelStarted;
+    [SerializeField] private bool _levelEnded;
+    
     
     private Potion[] _availableRecipes;
     
@@ -49,7 +52,9 @@ public class OrderSystem : MonoBehaviour {
          instance = this;
          _score = 0;
          _timeLastOrder = 0f;
+         _timeStart = 0f;
          _levelStarted = false;
+         _levelEnded = false;
      }
 
      void Start() {
@@ -58,24 +63,39 @@ public class OrderSystem : MonoBehaviour {
     }
 
     void Update() {
-        if (!_levelStarted)
+        if (!_levelStarted || _levelEnded) 
             return;
         
         if (Time.time - _timeLastOrder >= _timeUntilNextOrder) {
             CreateNewOrder();
         }
-        
-        
+
+        if (Time.time - _timeStart > timeLimit) {
+            EndLevel();    
+        }
     }
 
     void StartLevel() {
         if (_levelStarted)
             return;
 
-        _timeLastOrder = Time.time;
+        _timeStart = _timeLastOrder = Time.time;
         _timeUntilNextOrder = 5;
         _levelStarted = true;
         startText.SetActive(false);
+    }
+
+    void EndLevel() {
+        if (_levelEnded)
+            return;
+        
+        _levelEnded = true;
+        
+        // Clear orders and Order UI
+        OrderPanelUI.CLEAR_ORDERS();
+        _currentOrders.Clear();
+        
+        // Display Game Over UI
     }
     
     void CreateNewOrder() {
@@ -128,5 +148,13 @@ public class OrderSystem : MonoBehaviour {
 
     public static int GET_SCORE() {
         return instance.Score;
+    }
+
+    public static float GET_TIME_REMAINING() {
+        if (!instance._levelStarted)
+            return instance.timeLimit;
+        if (instance._levelEnded)
+            return 0;
+        return instance.timeLimit - (Time.time - instance._timeStart);
     }
 }
