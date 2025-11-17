@@ -21296,7 +21296,7 @@ PrefabInstance:
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
       propertyPath: recipeUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4366741335974946818, guid: f73574345c6c4694daf68a1b90cfa123, type: 3}
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
       propertyPath: resultSlot
       value: 
