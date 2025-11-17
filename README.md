@@ -11,11 +11,7 @@ A witch has decided to start a new business venture in town and needs help to ma
 - WASD to move the cat
 - Spacebar to make the cat jump
 - O to pick up/drop ingredients
-
-## Recipes:
-- Eggplant + Triangle_Shroom = Blue Potion
-- Dawn Petal + Bag O' Corn + Triangle Shroom = Green Potion
-- Red Apple + Cattail = Orange Potion
+- Hit Tab to open the recipe menu
 
 ## 🚧 Potential Future Plans
 - Implement levels 2 & 3
