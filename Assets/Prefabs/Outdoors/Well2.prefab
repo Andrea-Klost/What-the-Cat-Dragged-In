@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6813138793395416598}
   - component: {fileID: 7575892640941171123}
   - component: {fileID: 5676239216201930105}
-  m_Layer: 0
+  - component: {fileID: 268734798}
+  m_Layer: 9
   m_Name: Well2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6180892581236585644}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.443071, y: 0.008475578, z: 6.7122416}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &268734798
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180892581236585644}
+  m_Material: {fileID: 13400000, guid: de788549e5d2f6541b16ef290a5d6e10, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8012563891942627399, guid: 64436b597534c30449c91be02510cec9, type: 3}
