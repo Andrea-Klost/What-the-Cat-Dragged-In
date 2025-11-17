@@ -158,4 +158,8 @@ public class CauldronBrewing : MonoBehaviour {
     public static void ON_BUTTON_CANCEL() {
         instance.ClearSlots();
     }
+
+    public static Potion[] GET_RECIPE_LIST() {
+        return instance.recipes;
+    }
 }
