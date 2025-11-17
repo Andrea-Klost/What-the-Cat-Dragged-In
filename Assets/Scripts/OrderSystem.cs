@@ -17,6 +17,7 @@ public class OrderSystem : MonoBehaviour {
     [Header("Level")]
     [Tooltip("Time the player gets to complete the level in seconds")]
     public float timeLimit = 300;
+    public int scoreGoal = 500;
     public GameObject startText;
     
     [Header("Orders")]
@@ -96,6 +97,7 @@ public class OrderSystem : MonoBehaviour {
         _currentOrders.Clear();
         
         // Display Game Over UI
+        GameOverUI.DISPLAY_GAMEOVER(Score >= scoreGoal);
     }
     
     void CreateNewOrder() {
@@ -148,6 +150,10 @@ public class OrderSystem : MonoBehaviour {
 
     public static int GET_SCORE() {
         return instance.Score;
+    }
+
+    public static int GET_SCORE_GOAL() {
+        return instance.scoreGoal;
     }
 
     public static float GET_TIME_REMAINING() {
