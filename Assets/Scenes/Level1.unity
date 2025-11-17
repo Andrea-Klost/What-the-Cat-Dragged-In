@@ -4710,11 +4710,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4686959340557818, guid: 8e29bd443d493f14fbfdb399f8316b38, type: 3}
   m_PrefabInstance: {fileID: 471952578}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &476640969 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5653742395768140722, guid: d3953e22b9d86d8438e395d2eef2a2a0, type: 3}
-  m_PrefabInstance: {fileID: 5653742395833681275}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &477261501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9957,7 +9952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998880101}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.14644662, w: 0.8535534}
-  m_LocalPosition: {x: -34.699997, y: 50, z: -36}
+  m_LocalPosition: {x: -34.699997, y: 50, z: -36.600014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21843,10 +21838,6 @@ PrefabInstance:
       propertyPath: popupUI
       value: 
       objectReference: {fileID: 990475542}
-    - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
-      propertyPath: recipeUI
-      value: 
-      objectReference: {fileID: 4366741335974946818, guid: f73574345c6c4694daf68a1b90cfa123, type: 3}
     - target: {fileID: 127928771182715344, guid: 7656383821b94e940b135fc05b4e7871, type: 3}
       propertyPath: resultSlot
       value: 
