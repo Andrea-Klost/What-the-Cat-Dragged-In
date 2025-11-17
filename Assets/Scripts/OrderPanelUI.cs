@@ -38,6 +38,13 @@ public class OrderPanelUI : MonoBehaviour {
             _managedOrders[i].gameObject.transform.localPosition = position;
         }
     }
+
+    void ClearOrders() {
+        foreach (OrderUI managedOrder in _managedOrders) {
+            Destroy(managedOrder.gameObject);
+        }
+        _managedOrders.Clear();
+    }
     
     public static void ADD_ORDER(Order order) {
         instance.AddOrder(order);
@@ -45,5 +52,9 @@ public class OrderPanelUI : MonoBehaviour {
 
     public static void REMOVE_ORDER(int index) {
         instance.RemoveOrder(index);
+    }
+
+    public static void CLEAR_ORDERS() {
+        instance.ClearOrders();
     }
 }
