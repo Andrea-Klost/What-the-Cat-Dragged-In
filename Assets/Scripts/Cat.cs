@@ -59,6 +59,8 @@ public class Cat : MonoBehaviour {
             Grab();
         if (Input.GetKeyDown("return"))
             OrderSystem.START_LEVEL();
+        if (Input.GetKeyDown("tab"))
+            RecipeMenu.TOGGLE_MENU();
     }
 
     void Jump() {

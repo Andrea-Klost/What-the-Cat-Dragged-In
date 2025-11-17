@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecipeMenu : MonoBehaviour
-{
+public class RecipeMenu : MonoBehaviour {
+    private static RecipeMenu instance;
  public GameObject HideThis;
 
+     void Awake() {
+         instance = this;
+     }
+ 
     public void ToggleMenu()
     {
         bool isActive = HideThis.activeSelf;
@@ -24,5 +28,9 @@ public class RecipeMenu : MonoBehaviour
         {
             HideThis.SetActive(true);
         } 
+    }
+
+    public static void TOGGLE_MENU() {
+        instance.ToggleMenu();
     }
 }
