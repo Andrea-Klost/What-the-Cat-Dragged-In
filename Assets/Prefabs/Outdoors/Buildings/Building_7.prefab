@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9118584296282214278}
   - component: {fileID: 6444456809696312140}
   - component: {fileID: 5055727256467478835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Building_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4787241892744272537}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.464, y: 0.003, z: 6.596}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,7 +91,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4787241892744272537}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: de788549e5d2f6541b16ef290a5d6e10, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
