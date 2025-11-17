@@ -2131,7 +2131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5980079812121955764, guid: 6bdcec694cf1dd8468d7bdc5c6ff6523, type: 3}
       propertyPath: sceneName
-      value: Level1-map
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 5980079812121955767, guid: 6bdcec694cf1dd8468d7bdc5c6ff6523, type: 3}
       propertyPath: m_Pivot.x
