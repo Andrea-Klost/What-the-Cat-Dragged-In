@@ -32,6 +32,6 @@ public class LevelNodeUI : MonoBehaviour
     {
         if (!unlocked) return;
         if (!string.IsNullOrEmpty(sceneName))
-            SceneManager.LoadScene("Level1"); //Scene-map tempfix.
+            SceneManager.LoadScene(sceneName);
     }
 }

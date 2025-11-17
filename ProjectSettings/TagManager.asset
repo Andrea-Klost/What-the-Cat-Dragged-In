@@ -33,6 +33,9 @@ TagManager:
   - Unknown_Sapling
   - Void_Banana
   - ==INGREDIENT_TAGS==
+  - Potion_Blue
+  - Potion_Orange
+  - Potion_Green
   layers:
   - Default
   - TransparentFX
@@ -47,7 +50,7 @@ TagManager:
   - Grabbable
   - Spawner
   - Cauldron
-  - 
+  - Delivery
   - 
   - 
   - 
