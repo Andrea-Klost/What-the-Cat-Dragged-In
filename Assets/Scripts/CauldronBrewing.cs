@@ -11,7 +11,6 @@ public class CauldronBrewing : MonoBehaviour {
     [SerializeField]
     public Potion[] recipes; // Prefabs of the potions, must have Potion component
     public GameObject popupUI;
-    public GameObject recipeUI;
     public Transform potionSpawnPoint;
     public Slot[] brewingSlots; // 0-2 ; Ingredients 1-3
     public Slot resultSlot;
@@ -36,10 +35,6 @@ public class CauldronBrewing : MonoBehaviour {
         {
             popupUI.SetActive(false); // Toggle Visibility
         }
-        if(recipeUI != null)
-        {
-            recipeUI.SetActive(false);
-        }
     }
     
     void OnTriggerEnter(Collider coll) {
@@ -47,7 +42,6 @@ public class CauldronBrewing : MonoBehaviour {
         if(coll.gameObject.layer == LayerMask.NameToLayer("Cat"))
         {
             popupUI.SetActive(true);
-            recipeUI.SetActive(true);
         }
         
         // If item add to list and check for a recipe match
