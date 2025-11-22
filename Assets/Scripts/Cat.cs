@@ -38,8 +38,17 @@ public class Cat : MonoBehaviour {
     }
     
     void Update() {
-        Vector3 inputVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 inputVector = Vector3.zero;
         
+        if (Input.GetKey("w"))
+            inputVector += new Vector3(0.5f, 0, 0.5f);
+        if (Input.GetKey("a"))
+            inputVector += new Vector3(-0.5f, 0, 0.5f);
+        if (Input.GetKey("s"))
+            inputVector += new Vector3(-0.5f, 0, -0.5f);
+        if (Input.GetKey("d"))
+            inputVector += new Vector3(0.5f, 0, -0.5f);
+
         Vector3 velocity = rbody.velocity;
         velocity.x = inputVector.normalized.x * movementSpeed;
         velocity.z = inputVector.normalized.z * movementSpeed;
@@ -47,7 +56,7 @@ public class Cat : MonoBehaviour {
 
         // Rotate player towards movement
         // Round so that rotation always lands on full input
-        Vector3 targetDirection = new Vector3(Mathf.Round(inputVector.x), 0, Mathf.Round(inputVector.z));
+        Vector3 targetDirection = inputVector;
         float singleStep = rotateSpeed * Time.deltaTime;
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection,
             singleStep, 0f);
