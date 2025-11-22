@@ -55,7 +55,7 @@ public class Cat : MonoBehaviour {
         
         if (Input.GetKeyDown("space"))
             Jump();
-        if (Input.GetKeyDown("o"))
+        if (Input.GetKeyDown("e"))
             Grab();
         if (Input.GetKeyDown("return"))
             OrderSystem.START_LEVEL();
