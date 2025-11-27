@@ -1505,6 +1505,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 131364654}
     m_Modifications:
+    - target: {fileID: 1084997066, guid: 7c3cb6fe97c30d947ae86e53c04ac058, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1278349697981973468, guid: 7c3cb6fe97c30d947ae86e53c04ac058, type: 3}
       propertyPath: m_Name
       value: Vase_2
@@ -2966,6 +2970,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091965885746450, guid: 3f9afb8cd50cdbb4e809f311e2afed77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009752381118916635, guid: 3f9afb8cd50cdbb4e809f311e2afed77, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4586,6 +4594,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 150240121}
     m_Modifications:
+    - target: {fileID: 1612207527, guid: 5cfd4a6b2ea91344f94e74b885be6ca4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1368697924802150, guid: 5cfd4a6b2ea91344f94e74b885be6ca4, type: 3}
       propertyPath: m_Name
       value: Stool1
@@ -5566,6 +5578,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 131364654}
     m_Modifications:
+    - target: {fileID: 262703724, guid: f66a133dc2ffd9f4a94fa3cdcd8367c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1512746137559074, guid: f66a133dc2ffd9f4a94fa3cdcd8367c9, type: 3}
       propertyPath: m_Name
       value: CabbageCrate1
@@ -7468,6 +7484,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6920963549589626454, guid: a6a526ad9171b0c49a3c326944250047, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a526ad9171b0c49a3c326944250047, type: 3}
 --- !u!1001 &723730002
@@ -8543,6 +8563,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 131364654}
     m_Modifications:
+    - target: {fileID: 692503337179360910, guid: 65130df02e505f0498444f4a0d81932a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7340377538585281548, guid: 65130df02e505f0498444f4a0d81932a, type: 3}
       propertyPath: m_Name
       value: Shelves2
@@ -11220,6 +11244,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1478686701}
     m_Modifications:
+    - target: {fileID: 1084997066, guid: 7c3cb6fe97c30d947ae86e53c04ac058, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1278349697981973468, guid: 7c3cb6fe97c30d947ae86e53c04ac058, type: 3}
       propertyPath: m_Name
       value: Vase_2
@@ -11659,6 +11687,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 270465973}
     m_Modifications:
+    - target: {fileID: 2577590289187130090, guid: f31d7085a400ebb4d8a0db596ba837f8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2928252327384129804, guid: f31d7085a400ebb4d8a0db596ba837f8, type: 3}
       propertyPath: m_Name
       value: Bale1
@@ -12120,6 +12152,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4378547764914004, guid: c92a12fb577ec0a48abf55cfc24bcecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808934517286317096, guid: c92a12fb577ec0a48abf55cfc24bcecd, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -13292,6 +13328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 270465973}
     m_Modifications:
+    - target: {fileID: 1084997066, guid: 7c3cb6fe97c30d947ae86e53c04ac058, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1278349697981973468, guid: 7c3cb6fe97c30d947ae86e53c04ac058, type: 3}
       propertyPath: m_Name
       value: Vase_2
@@ -13480,6 +13520,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1478686701}
     m_Modifications:
+    - target: {fileID: 1305642388, guid: 98a608ba60cf6054c91938155439cdf9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4784127614267369530, guid: 98a608ba60cf6054c91938155439cdf9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14195,6 +14239,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 270465973}
     m_Modifications:
+    - target: {fileID: 1933177353246769234, guid: d5902e20945aff24c9f53e85e01345c7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4702537556571380283, guid: d5902e20945aff24c9f53e85e01345c7, type: 3}
       propertyPath: m_Name
       value: StallTable_1
@@ -15053,6 +15101,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1798590857071225013, guid: 2b34bca5d404b6d4f82a58459e6f87bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951297986655457282, guid: 2b34bca5d404b6d4f82a58459e6f87bf, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15981,6 +16033,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 131364654}
     m_Modifications:
+    - target: {fileID: 427155289, guid: 1c639f495d926094e8fc0ca59c3ddd38, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8281770850061963867, guid: 1c639f495d926094e8fc0ca59c3ddd38, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -20905,6 +20961,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 131364654}
     m_Modifications:
+    - target: {fileID: 1305642388, guid: 98a608ba60cf6054c91938155439cdf9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4784127614267369530, guid: 98a608ba60cf6054c91938155439cdf9, type: 3}
       propertyPath: m_RootOrder
       value: 2
