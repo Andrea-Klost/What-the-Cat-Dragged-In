@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1191872420}
   - component: {fileID: 1191872424}
   - component: {fileID: 6150970794559090360}
+  - component: {fileID: -3619803667156675579}
   m_Layer: 10
   m_Name: Bag_O_Corn
   m_TagString: Bag_O_Corn
@@ -129,6 +130,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   itemSprite: {fileID: 21300000, guid: 4cab510a7b9e4374db347cf79040cbed, type: 3}
+--- !u!114 &-3619803667156675579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452498389250755408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46249d330e99f943909f7328f9a4d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
 --- !u!1001 &619264887
 PrefabInstance:
   m_ObjectHideFlags: 0
