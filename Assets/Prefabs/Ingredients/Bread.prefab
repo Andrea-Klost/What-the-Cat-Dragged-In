@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4154891855363149701}
   - component: {fileID: 1667109781}
   - component: {fileID: 1667109785}
+  - component: {fileID: 1441023208339029371}
   m_Layer: 10
   m_Name: Bread
   m_TagString: Bread
@@ -113,6 +114,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486618677212967}
+--- !u!114 &1441023208339029371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465403097776346366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1001 &428010939
 PrefabInstance:
   m_ObjectHideFlags: 0

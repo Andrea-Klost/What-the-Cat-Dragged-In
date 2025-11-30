@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4092161233390960207}
   - component: {fileID: 1897293527}
   - component: {fileID: 1897293531}
+  - component: {fileID: 5560725127385896571}
   m_Layer: 10
   m_Name: Blue_Starpetal
   m_TagString: Blue_Starpetal
@@ -113,6 +114,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486619140930467}
+--- !u!114 &5560725127385896571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579078820527857562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1001 &92184895
 PrefabInstance:
   m_ObjectHideFlags: 0
