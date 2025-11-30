@@ -112,7 +112,7 @@ public class Cat : MonoBehaviour {
             Grabbable grabScript = grabTarget.GetComponent<Grabbable>();
 
             // Reparent to move with Cat
-            grabTarget.transform.SetParent(grabPoint, false);
+            grabTarget.transform.SetParent(grabPoint, true);
             
             /* Set up transform of grabbed object */
             // Rotate so that the item is facing the same direction as the Cat
