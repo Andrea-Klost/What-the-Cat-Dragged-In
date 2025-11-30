@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4092161233390960207}
   - component: {fileID: 1897293527}
   - component: {fileID: 1897293531}
+  - component: {fileID: 4470502392142864626}
   m_Layer: 10
   m_Name: Blue_Starpetal
   m_TagString: Blue_Starpetal
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2579078820527857562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 29.846756, y: 0, z: 22.076185}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3231486619140930467}
@@ -113,6 +114,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486619140930467}
+--- !u!114 &4470502392142864626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579078820527857562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46249d330e99f943909f7328f9a4d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 1
+  rotationSpeed: 100
 --- !u!1001 &92184895
 PrefabInstance:
   m_ObjectHideFlags: 0

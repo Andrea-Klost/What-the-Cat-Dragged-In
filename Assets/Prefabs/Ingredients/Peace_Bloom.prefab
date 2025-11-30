@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2010930040752222116}
   - component: {fileID: 546751125}
   - component: {fileID: 546751129}
+  - component: {fileID: -3884223889924108086}
   m_Layer: 10
   m_Name: Peace_Bloom
   m_TagString: Peace_Bloom
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1999375349733831366}
   m_LocalRotation: {x: 0.14580832, y: 0.6919104, z: 0.6919104, w: -0.14580832}
   m_LocalPosition: {x: 16.089231, y: 0.0043240134, z: 8.617548}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 170, y: 170, z: 170}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1994472629482988328}
@@ -118,6 +119,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 3231486617298375132}
+--- !u!114 &-3884223889924108086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999375349733831366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46249d330e99f943909f7328f9a4d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 2
+  rotationSpeed: 100
 --- !u!1 &1999405001987442494
 GameObject:
   m_ObjectHideFlags: 0
