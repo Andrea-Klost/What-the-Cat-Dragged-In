@@ -9274,6 +9274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseDeliveryLocation2
       objectReference: {fileID: 0}
+    - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95354125908c6144aa125a61432cfab1, type: 3}
 --- !u!1 &886512162
@@ -9663,6 +9667,10 @@ PrefabInstance:
     - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
       propertyPath: m_Name
       value: HouseDeliveryLocation5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95354125908c6144aa125a61432cfab1, type: 3}
@@ -12956,6 +12964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseDeliveryLocation1
       objectReference: {fileID: 0}
+    - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95354125908c6144aa125a61432cfab1, type: 3}
 --- !u!1001 &1237127465
@@ -13921,6 +13933,10 @@ PrefabInstance:
     - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
       propertyPath: m_Name
       value: HouseDeliveryLocation6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95354125908c6144aa125a61432cfab1, type: 3}
@@ -15232,6 +15248,10 @@ PrefabInstance:
     - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
       propertyPath: m_Name
       value: HouseDeliveryLocation4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95354125908c6144aa125a61432cfab1, type: 3}
@@ -22030,6 +22050,10 @@ PrefabInstance:
     - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
       propertyPath: m_Name
       value: HouseDeliveryLocation3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092997910153474162, guid: 95354125908c6144aa125a61432cfab1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95354125908c6144aa125a61432cfab1, type: 3}
