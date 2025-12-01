@@ -131,7 +131,22 @@ public class OrderSystem : MonoBehaviour {
     void ChangeDeliveryLocation() {
         if (_activeDeliveryLocationIndex >= 0)
             _deliveryLocations[_activeDeliveryLocationIndex].gameObject.SetActive(false);
-        _activeDeliveryLocationIndex = UnityEngine.Random.Range(0, _deliveryLocations.Length);
+
+        if (_deliveryLocations.Length == 1) {
+            _activeDeliveryLocationIndex = 0;
+        }
+        else if (_deliveryLocations.Length <= 0) {
+            Debug.LogWarning("OrderSystem: No DeliveryLocations in Scene");
+            return;
+        }
+        else {
+            // Choose a random delivery location that is not the last location
+            // (this means the same delivery location will not be chosen twice in a row)
+            int oldIndex = _activeDeliveryLocationIndex;
+            while (_activeDeliveryLocationIndex == oldIndex) {
+                _activeDeliveryLocationIndex = UnityEngine.Random.Range(0, _deliveryLocations.Length);
+            }
+        }
         _deliveryLocations[_activeDeliveryLocationIndex].gameObject.SetActive(true);
     }
 
