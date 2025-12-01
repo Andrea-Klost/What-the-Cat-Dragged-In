@@ -8,7 +8,8 @@ public class Cat : MonoBehaviour {
     [Header("Movement")] 
     public float movementSpeed = 10f;
     public float jumpImpulse = 10f;
-
+    public float jumpCutOffMultiplier = 2f;
+    
     [Header("Grabbing")]
     [Tooltip("Point that defines position of object when grabbed")]
     public Transform grabPoint;
@@ -64,6 +65,9 @@ public class Cat : MonoBehaviour {
         
         if (Input.GetKeyDown("space"))
             Jump();
+        else if (Input.GetKeyUp("space"))
+            CutOffJump();
+                
         if (Input.GetKeyDown("e"))
             Grab();
         if (Input.GetKeyDown("return"))
@@ -77,6 +81,14 @@ public class Cat : MonoBehaviour {
         if (IsGrounded()) {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
+            rbody.velocity = velocity;
+        }
+    }
+
+    void CutOffJump() {
+        if (rbody.velocity.y > 0) {
+            Vector3 velocity = rbody.velocity;
+            velocity.y /= jumpCutOffMultiplier;
             rbody.velocity = velocity;
         }
     }
