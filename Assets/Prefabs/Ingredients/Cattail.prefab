@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1597798774}
   - component: {fileID: 1597798778}
   - component: {fileID: 5330813746898770297}
+  - component: {fileID: 949470166694478107}
   m_Layer: 10
   m_Name: Cattail
   m_TagString: Cattail
@@ -128,6 +129,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   itemSprite: {fileID: 21300000, guid: 3695dfb8c16a66b4caece95c03ca1de0, type: 3}
+--- !u!114 &949470166694478107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165075679891398956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46249d330e99f943909f7328f9a4d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 1
+  rotationSpeed: 100
 --- !u!1001 &240319376
 PrefabInstance:
   m_ObjectHideFlags: 0
