@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 7
-  jumpImpulse: 9
+  jumpImpulse: 10
+  jumpCutOffMultiplier: 2
   grabPoint: {fileID: 3743622982510587863}
   grabTarget: {fileID: 0}
   grabbedObject: {fileID: 0}
