@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
-  itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemSprite: {fileID: 21300000, guid: 274f520569cbd064eae78a5929104bca, type: 3}
 --- !u!1001 &428010939
 PrefabInstance:
   m_ObjectHideFlags: 0
