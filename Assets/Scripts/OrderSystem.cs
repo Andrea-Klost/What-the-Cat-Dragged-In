@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [Serializable]
 public struct Order {
@@ -20,6 +19,7 @@ public class OrderSystem : MonoBehaviour {
     public float timeLimit = 300;
     public int scoreGoal = 500;
     public GameObject startText;
+    public int levelNumber = 1;
     
     [Header("Orders")]
     public int maxOrdersAtOnce = 5;
@@ -102,6 +102,11 @@ public class OrderSystem : MonoBehaviour {
         OrderPanelUI.CLEAR_ORDERS();
         instance.DisableAllDeliveryLocations(); // Disable all delivery locations
         _currentOrders.Clear();
+
+        bool isLevelSucess = Score >= scoreGoal;
+        if (isLevelSucess) {
+            PlayerPrefs.SetInt($"lvl{levelNumber + 1}_unlocked", 1);
+        }
         
         // Display Game Over UI
         GameOverUI.DISPLAY_GAMEOVER(Score >= scoreGoal);
@@ -176,6 +181,10 @@ public class OrderSystem : MonoBehaviour {
         OrderPanelUI.REMOVE_ORDER(orderIndex);
         instance._currentOrders.RemoveAt(orderIndex);
         instance.ChangeDeliveryLocation();
+
+        if (instance.Score >= instance.scoreGoal) { // end level early if goal is reached
+            instance.EndLevel();
+        }
         
         return true;
     }
