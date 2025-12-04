@@ -3847,7 +3847,7 @@ MonoBehaviour:
   levelNumber: 0
   maxOrdersAtOnce: 5
   minTimeBetweenOrders: 15
-  maxTimeBetweenOrders: 30
+  maxTimeBetweenOrders: 25
   ingredientMultiplier: 20
   timeThreshold: 25
   _currentOrders: []
