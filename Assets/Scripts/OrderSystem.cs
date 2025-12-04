@@ -99,7 +99,7 @@ public class OrderSystem : MonoBehaviour {
 
         bool isLevelSucess = Score >= scoreGoal;
         if (isLevelSucess) {
-            PlayerPrefs.SetInt($"lvl{levelNumber}_unlocked", 1);
+            PlayerPrefs.SetInt($"lvl{levelNumber + 1}_unlocked", 1);
         }
         
         // Display Game Over UI
