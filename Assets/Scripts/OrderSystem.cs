@@ -146,6 +146,10 @@ public class OrderSystem : MonoBehaviour {
         instance.AssignScore(instance._currentOrders[orderIndex]);
         OrderPanelUI.REMOVE_ORDER(orderIndex);
         instance._currentOrders.RemoveAt(orderIndex);
+
+        if (instance.Score >= instance.scoreGoal) { // end level early if goal is reached
+            instance.EndLevel();
+        }
         
         return true;
     }
