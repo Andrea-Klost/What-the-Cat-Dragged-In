@@ -73,7 +73,7 @@ public class Cat : MonoBehaviour {
         if (Input.GetKeyDown("return"))
             OrderSystem.START_LEVEL();
         if (Input.GetKeyDown("tab"))
-            RecipeMenu.TOGGLE_MENU();
+            HelpMenu.TOGGLE_MENU();
     }
 
     void Jump() {
