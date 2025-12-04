@@ -19,6 +19,7 @@ public class OrderSystem : MonoBehaviour {
     public float timeLimit = 300;
     public int scoreGoal = 500;
     public GameObject startText;
+    public int levelNumber = 1;
     
     [Header("Orders")]
     public int maxOrdersAtOnce = 5;
@@ -95,9 +96,14 @@ public class OrderSystem : MonoBehaviour {
         // Clear orders and Order UI
         OrderPanelUI.CLEAR_ORDERS();
         _currentOrders.Clear();
+
+        bool isLevelSucess = Score >= scoreGoal;
+        if (isLevelSucess) {
+            PlayerPrefs.SetInt($"lvl{levelNumber}_unlocked", 1);
+        }
         
         // Display Game Over UI
-        GameOverUI.DISPLAY_GAMEOVER(Score >= scoreGoal);
+        GameOverUI.DISPLAY_GAMEOVER(isLevelSucess);
     }
     
     void CreateNewOrder() {

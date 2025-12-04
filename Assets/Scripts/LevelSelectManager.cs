@@ -11,7 +11,7 @@ public class LevelSelectManager : MonoBehaviour
         // Default state: Level 1 unlocked, others locked
         for (int i = 0; i < nodes.Length; i++)
         {
-            int level = i + 1;
+            int level = i;
 
             // First run defaults:
             bool defaultUnlocked = (i == 0); // only level 1 unlocked
