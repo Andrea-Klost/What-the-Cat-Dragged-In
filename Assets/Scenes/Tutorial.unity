@@ -3710,12 +3710,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80af5b265f1f7324db678a811b72a24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 300
-  scoreGoal: 500
+  timeLimit: 100
+  scoreGoal: 200
   startText: {fileID: 1112818583}
   levelNumber: 0
   maxOrdersAtOnce: 5
-  minTimeBetweenOrders: 10
+  minTimeBetweenOrders: 15
   maxTimeBetweenOrders: 30
   ingredientMultiplier: 20
   timeThreshold: 25
