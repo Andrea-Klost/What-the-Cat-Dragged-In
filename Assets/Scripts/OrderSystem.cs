@@ -103,8 +103,8 @@ public class OrderSystem : MonoBehaviour {
         instance.DisableAllDeliveryLocations(); // Disable all delivery locations
         _currentOrders.Clear();
 
-        bool isLevelSucess = Score >= scoreGoal;
-        if (isLevelSucess) {
+        bool isLevelSuccess = Score >= scoreGoal;
+        if (isLevelSuccess) {
             PlayerPrefs.SetInt($"lvl{levelNumber + 1}_unlocked", 1);
         }
         
