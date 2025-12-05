@@ -3015,6 +3015,7 @@ MonoBehaviour:
   timeLimit: 300
   scoreGoal: 500
   startText: {fileID: 2029753946}
+  levelNumber: 1
   maxOrdersAtOnce: 5
   minTimeBetweenOrders: 10
   maxTimeBetweenOrders: 30
@@ -3026,6 +3027,8 @@ MonoBehaviour:
   _timeStart: 0
   _levelStarted: 0
   _levelEnded: 0
+  _deliveryLocations: []
+  _activeDeliveryLocationIndex: 0
   _score: 0
 --- !u!1001 &489374379
 PrefabInstance:
@@ -5699,7 +5702,7 @@ Transform:
   m_GameObject: {fileID: 1075539923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.198284, y: -11.656921, z: 22.94289}
-  m_LocalScale: {x: 110, y: 0.01, z: 9}
+  m_LocalScale: {x: 121.49, y: 0.01, z: 9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1290917923}
