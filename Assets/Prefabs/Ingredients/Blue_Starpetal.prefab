@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2918730759113770272}
-  - component: {fileID: 2246928685350554245}
-  - component: {fileID: 4092161233390960207}
-  - component: {fileID: 1897293527}
   - component: {fileID: 1897293531}
   - component: {fileID: 5560725127385896571}
+  - component: {fileID: 2626248296289674327}
+  - component: {fileID: 8367003962299549549}
   m_Layer: 10
   m_Name: Blue_Starpetal
   m_TagString: Blue_Starpetal
@@ -28,30 +27,118 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2579078820527857562}
-  m_LocalRotation: {x: -0, y: 0.7645827, z: -0, w: 0.6445257}
-  m_LocalPosition: {x: 29.846756, y: 0, z: 22.076185}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3231486619140930467}
+  - {fileID: 8257278115123221977}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1897293531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579078820527857562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2685a2e324a425a42b13b95978604331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPoint: {fileID: 3231486619140930467}
+--- !u!114 &5560725127385896571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579078820527857562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 
+  itemSprite: {fileID: 21300000, guid: a4a0e40f02e799647bf148fb2da76590, type: 3}
+--- !u!65 &2626248296289674327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579078820527857562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
+  m_Center: {x: 0, y: 0.27, z: 0}
+--- !u!114 &8367003962299549549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579078820527857562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46249d330e99f943909f7328f9a4d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: 1
+  rotationSpeed: 100
+--- !u!1 &6686836203442841864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8257278115123221977}
+  - component: {fileID: 6964219320036963175}
+  - component: {fileID: 1952984909162959818}
+  m_Layer: 10
+  m_Name: Blue_Starpetal
+  m_TagString: Blue_Starpetal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8257278115123221977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686836203442841864}
+  m_LocalRotation: {x: -0, y: 0.7645827, z: -0, w: 0.6445257}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2918730759113770272}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 99.74, z: 0}
---- !u!33 &2246928685350554245
+--- !u!33 &6964219320036963175
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579078820527857562}
+  m_GameObject: {fileID: 6686836203442841864}
   m_Mesh: {fileID: 409649318741970221, guid: d0c65414b8eee6f40a0902ca4c44c0be, type: 3}
---- !u!23 &4092161233390960207
+--- !u!23 &1952984909162959818
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579078820527857562}
+  m_GameObject: {fileID: 6686836203442841864}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,47 +174,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1897293527
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579078820527857562}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.16601789
-  m_Height: 0.31128362
-  m_Direction: 1
-  m_Center: {x: 0.014682833, y: 0.15564181, z: 0.0013002459}
---- !u!114 &1897293531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579078820527857562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2685a2e324a425a42b13b95978604331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabPoint: {fileID: 3231486619140930467}
---- !u!114 &5560725127385896571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579078820527857562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: 
-  itemSprite: {fileID: 21300000, guid: a4a0e40f02e799647bf148fb2da76590, type: 3}
 --- !u!1001 &92184895
 PrefabInstance:
   m_ObjectHideFlags: 0
