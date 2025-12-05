@@ -3017,11 +3017,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80af5b265f1f7324db678a811b72a24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 300
-  scoreGoal: 500
+  timeLimit: 420
+  scoreGoal: 720
   startText: {fileID: 2029753946}
   levelNumber: 1
-  maxOrdersAtOnce: 5
+  maxOrdersAtOnce: 4
   minTimeBetweenOrders: 10
   maxTimeBetweenOrders: 30
   ingredientMultiplier: 20
@@ -6624,7 +6624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1196092654
 MonoBehaviour:
   m_ObjectHideFlags: 0
