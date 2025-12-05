@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 619563112509957557}
   m_LocalRotation: {x: 0.14580832, y: 0.6919104, z: 0.6919104, w: -0.14580832}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7457254923532677563}
   m_Father: {fileID: 1994019917434848234}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 2232676534349055889}
   - component: {fileID: 9152220409906330923}
   m_Layer: 10
-  m_Name: Peace_Bloom
+  m_Name: Peace_Bloom_Big
   m_TagString: Peace_Bloom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,15 +312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3231486619088067228, guid: 02a4c1bbb08717e4f9369a4ab0155d30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.026
+      value: -0.051
       objectReference: {fileID: 0}
     - target: {fileID: 3231486619088067228, guid: 02a4c1bbb08717e4f9369a4ab0155d30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.142
+      value: 0.289
       objectReference: {fileID: 0}
     - target: {fileID: 3231486619088067228, guid: 02a4c1bbb08717e4f9369a4ab0155d30, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1419
+      value: -0.323
       objectReference: {fileID: 0}
     - target: {fileID: 3231486619088067228, guid: 02a4c1bbb08717e4f9369a4ab0155d30, type: 3}
       propertyPath: m_LocalRotation.w
