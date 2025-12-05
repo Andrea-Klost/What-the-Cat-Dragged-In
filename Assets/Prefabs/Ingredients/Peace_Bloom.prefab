@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 1431975565981590866}
   - component: {fileID: 8650694663374211215}
   - component: {fileID: 7948730749689679278}
-  - component: {fileID: 4459428222905645204}
-  - component: {fileID: 7349080128574856028}
-  - component: {fileID: 4342265620804824151}
   m_Layer: 10
   m_Name: Peace_Bloom
   m_TagString: Peace_Bloom
@@ -91,47 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4459428222905645204
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619563112509957557}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.004278457
-  m_Height: 0.005649067
-  m_Direction: 1
-  m_Center: {x: -0.000051040784, y: -0.00033163742, z: 0.0072148237}
---- !u!114 &7349080128574856028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619563112509957557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2685a2e324a425a42b13b95978604331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabPoint: {fileID: 0}
---- !u!114 &4342265620804824151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619563112509957557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ceafc48f82e0ee4198822bdbff2d7f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: 
-  itemSprite: {fileID: 21300000, guid: c7d3d30c4f89a8e449fedbf8b1bbbf78, type: 3}
 --- !u!1 &1999375349733831366
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,10 +97,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994019917434848234}
-  - component: {fileID: 546751125}
   - component: {fileID: 546751129}
   - component: {fileID: 6763841558723160401}
   - component: {fileID: 2232676534349055889}
+  - component: {fileID: 9152220409906330923}
   m_Layer: 10
   m_Name: Peace_Bloom
   m_TagString: Peace_Bloom
@@ -169,20 +125,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &546751125
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999375349733831366}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.004278457
-  m_Height: 0.005649067
-  m_Direction: 1
-  m_Center: {x: -0.000051040784, y: -0.00033163742, z: 0.0072148237}
 --- !u!114 &546751129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +166,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: 1
   rotationSpeed: 100
+--- !u!65 &9152220409906330923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999375349733831366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!1 &4644515653953556300
 GameObject:
   m_ObjectHideFlags: 0
