@@ -9,14 +9,32 @@ using UnityEngine;
 /// on the Grabbable layer and have a trigger collider.
 /// </summary>
 public class Grabbable : MonoBehaviour {
-    [Tooltip("Defines point that the Cat will grab the object from. If not set it will default to the object's transform")]
+    [Tooltip(
+        "Defines point that the Cat will grab the object from. If not set it will default to the object's transform")]
     public Transform grabPoint;
 
     public ItemSpawner Manager { get; set; } // ItemSpawner that manages this object
 
+    private RotateSprite _rotateSprite;
+    
     void Awake() {
-        if (grabPoint == null) { // If not set default to object's transform
+        if (grabPoint == null) {
+            // If not set default to object's transform
             grabPoint = gameObject.transform;
+        }
+
+        _rotateSprite = GetComponent<RotateSprite>();
+    }
+
+    public void OnGrab() {
+        if (_rotateSprite != null) {
+            _rotateSprite.enabled = false;
+        }
+    }
+
+    public void OnDrop() {
+        if (_rotateSprite != null) {
+            _rotateSprite.enabled = true;
         }
     }
 }

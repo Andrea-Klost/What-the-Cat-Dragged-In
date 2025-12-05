@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -73,7 +74,7 @@ public class Cat : MonoBehaviour {
         if (Input.GetKeyDown("return"))
             OrderSystem.START_LEVEL();
         if (Input.GetKeyDown("tab"))
-            RecipeMenu.TOGGLE_MENU();
+            HelpMenu.TOGGLE_MENU();
     }
 
     void Jump() {
@@ -114,7 +115,9 @@ public class Cat : MonoBehaviour {
     void Grab() {
         if (grabbedObject != null) { // Already have an object, attempt to drop
             if (IsGrounded()) {
+                Grabbable grabScript = grabbedObject.GetComponent<Grabbable>();
                 grabbedObject.transform.SetParent(null); // Set parent to world
+                if (grabScript != null) grabScript.OnDrop(); // notify object it has been dropped
                 grabbedObject = null;
             }
         }
@@ -122,7 +125,9 @@ public class Cat : MonoBehaviour {
             if (grabTarget == null) return;
             
             Grabbable grabScript = grabTarget.GetComponent<Grabbable>();
-
+            
+            grabScript.OnGrab(); // notify object it has been grabbed
+            
             // Reparent to move with Cat
             grabTarget.transform.SetParent(grabPoint, false);
             
