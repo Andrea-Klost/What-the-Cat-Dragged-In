@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -8,7 +9,8 @@ public class Cat : MonoBehaviour {
     [Header("Movement")] 
     public float movementSpeed = 10f;
     public float jumpImpulse = 10f;
-
+    public float jumpCutOffMultiplier = 2f;
+    
     [Header("Grabbing")]
     [Tooltip("Point that defines position of object when grabbed")]
     public Transform grabPoint;
@@ -38,8 +40,17 @@ public class Cat : MonoBehaviour {
     }
     
     void Update() {
-        Vector3 inputVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 inputVector = Vector3.zero;
         
+        if (Input.GetKey("w"))
+            inputVector += new Vector3(0.5f, 0, 0.5f);
+        if (Input.GetKey("a"))
+            inputVector += new Vector3(-0.5f, 0, 0.5f);
+        if (Input.GetKey("s"))
+            inputVector += new Vector3(-0.5f, 0, -0.5f);
+        if (Input.GetKey("d"))
+            inputVector += new Vector3(0.5f, 0, -0.5f);
+
         Vector3 velocity = rbody.velocity;
         velocity.x = inputVector.normalized.x * movementSpeed;
         velocity.z = inputVector.normalized.z * movementSpeed;
@@ -47,7 +58,7 @@ public class Cat : MonoBehaviour {
 
         // Rotate player towards movement
         // Round so that rotation always lands on full input
-        Vector3 targetDirection = new Vector3(Mathf.Round(inputVector.x), 0, Mathf.Round(inputVector.z));
+        Vector3 targetDirection = inputVector;
         float singleStep = rotateSpeed * Time.deltaTime;
         Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection,
             singleStep, 0f);
@@ -55,12 +66,15 @@ public class Cat : MonoBehaviour {
         
         if (Input.GetKeyDown("space"))
             Jump();
-        if (Input.GetKeyDown("o"))
+        else if (Input.GetKeyUp("space"))
+            CutOffJump();
+                
+        if (Input.GetKeyDown("e"))
             Grab();
         if (Input.GetKeyDown("return"))
             OrderSystem.START_LEVEL();
         if (Input.GetKeyDown("tab"))
-            RecipeMenu.TOGGLE_MENU();
+            HelpMenu.TOGGLE_MENU();
     }
 
     void Jump() {
@@ -68,6 +82,14 @@ public class Cat : MonoBehaviour {
         if (IsGrounded()) {
             Vector3 velocity = rbody.velocity;
             velocity.y += jumpImpulse;
+            rbody.velocity = velocity;
+        }
+    }
+
+    void CutOffJump() {
+        if (rbody.velocity.y > 0) {
+            Vector3 velocity = rbody.velocity;
+            velocity.y /= jumpCutOffMultiplier;
             rbody.velocity = velocity;
         }
     }
@@ -93,7 +115,9 @@ public class Cat : MonoBehaviour {
     void Grab() {
         if (grabbedObject != null) { // Already have an object, attempt to drop
             if (IsGrounded()) {
+                Grabbable grabScript = grabbedObject.GetComponent<Grabbable>();
                 grabbedObject.transform.SetParent(null); // Set parent to world
+                if (grabScript != null) grabScript.OnDrop(); // notify object it has been dropped
                 grabbedObject = null;
             }
         }
@@ -101,9 +125,11 @@ public class Cat : MonoBehaviour {
             if (grabTarget == null) return;
             
             Grabbable grabScript = grabTarget.GetComponent<Grabbable>();
-
+            
+            grabScript.OnGrab(); // notify object it has been grabbed
+            
             // Reparent to move with Cat
-            grabTarget.transform.SetParent(grabPoint, false);
+            grabTarget.transform.SetParent(grabPoint, true);
             
             /* Set up transform of grabbed object */
             // Rotate so that the item is facing the same direction as the Cat

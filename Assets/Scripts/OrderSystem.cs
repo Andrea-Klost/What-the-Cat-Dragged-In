@@ -19,6 +19,7 @@ public class OrderSystem : MonoBehaviour {
     public float timeLimit = 300;
     public int scoreGoal = 500;
     public GameObject startText;
+    public int levelNumber = 1;
     
     [Header("Orders")]
     public int maxOrdersAtOnce = 5;
@@ -38,7 +39,8 @@ public class OrderSystem : MonoBehaviour {
     [SerializeField] private float _timeStart;
     [SerializeField] private bool _levelStarted;
     [SerializeField] private bool _levelEnded;
-    
+    [SerializeField] private DeliveryLocation[] _deliveryLocations;
+    [SerializeField] private int _activeDeliveryLocationIndex;
     
     private Potion[] _availableRecipes;
     
@@ -56,10 +58,13 @@ public class OrderSystem : MonoBehaviour {
          _timeStart = 0f;
          _levelStarted = false;
          _levelEnded = false;
+         _activeDeliveryLocationIndex = -1;
      }
 
      void Start() {
         _availableRecipes = CauldronBrewing.GET_RECIPE_LIST();
+        _deliveryLocations = FindObjectsByType<DeliveryLocation>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        DisableAllDeliveryLocations();
         startText.SetActive(true);
     }
 
@@ -82,6 +87,7 @@ public class OrderSystem : MonoBehaviour {
 
         _timeStart = _timeLastOrder = Time.time;
         _timeUntilNextOrder = 5;
+        ChangeDeliveryLocation();
         _levelStarted = true;
         startText.SetActive(false);
     }
@@ -94,7 +100,13 @@ public class OrderSystem : MonoBehaviour {
         
         // Clear orders and Order UI
         OrderPanelUI.CLEAR_ORDERS();
+        instance.DisableAllDeliveryLocations(); // Disable all delivery locations
         _currentOrders.Clear();
+
+        bool isLevelSuccess = Score >= scoreGoal;
+        if (isLevelSuccess) {
+            PlayerPrefs.SetInt($"lvl{levelNumber + 1}_unlocked", 1);
+        }
         
         // Display Game Over UI
         GameOverUI.DISPLAY_GAMEOVER(Score >= scoreGoal);
@@ -121,6 +133,34 @@ public class OrderSystem : MonoBehaviour {
         return -1;
     }
 
+    void ChangeDeliveryLocation() {
+        if (_activeDeliveryLocationIndex >= 0)
+            _deliveryLocations[_activeDeliveryLocationIndex].gameObject.SetActive(false);
+
+        if (_deliveryLocations.Length == 1) {
+            _activeDeliveryLocationIndex = 0;
+        }
+        else if (_deliveryLocations.Length <= 0) {
+            Debug.LogWarning("OrderSystem: No DeliveryLocations in Scene");
+            return;
+        }
+        else {
+            // Choose a random delivery location that is not the last location
+            // (this means the same delivery location will not be chosen twice in a row)
+            int oldIndex = _activeDeliveryLocationIndex;
+            while (_activeDeliveryLocationIndex == oldIndex) {
+                _activeDeliveryLocationIndex = UnityEngine.Random.Range(0, _deliveryLocations.Length);
+            }
+        }
+        _deliveryLocations[_activeDeliveryLocationIndex].gameObject.SetActive(true);
+    }
+
+    void DisableAllDeliveryLocations() {
+        foreach (DeliveryLocation location in _deliveryLocations) {
+            location.gameObject.SetActive(false);
+        }
+    }
+    
     void AssignScore(Order order) {
         float timeTaken = Time.time - order.startTime;
         _score += order.potion.recipe.Count * ingredientMultiplier + 
@@ -140,6 +180,11 @@ public class OrderSystem : MonoBehaviour {
         instance.AssignScore(instance._currentOrders[orderIndex]);
         OrderPanelUI.REMOVE_ORDER(orderIndex);
         instance._currentOrders.RemoveAt(orderIndex);
+        instance.ChangeDeliveryLocation();
+
+        if (instance.Score >= instance.scoreGoal) { // end level early if goal is reached
+            instance.EndLevel();
+        }
         
         return true;
     }

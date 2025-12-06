@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RecipeMenu : MonoBehaviour {
-    private static RecipeMenu instance;
+public class HelpMenu : MonoBehaviour {
+    private static HelpMenu instance;
  public GameObject HideThis;
 
      void Awake() {
