@@ -94,6 +94,7 @@ MonoBehaviour:
   itemName: 
   index: 1
   slotLabel: {fileID: 7300262367072479082}
+  slotImage: {fileID: 2433435931075796973}
 --- !u!1 &985419542002590808
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +594,7 @@ MonoBehaviour:
   itemName: 
   index: 3
   slotLabel: {fileID: 2116647018425291289}
+  slotImage: {fileID: 4456628335484775132}
 --- !u!1 &3894966929121832561
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +689,7 @@ MonoBehaviour:
   itemName: 
   index: 2
   slotLabel: {fileID: 3163493137004074388}
+  slotImage: {fileID: 2235393086462650987}
 --- !u!1 &4279377399917585487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1337,7 @@ MonoBehaviour:
   itemName: 
   index: 0
   slotLabel: {fileID: 8574540219390167850}
+  slotImage: {fileID: 1117846882514043663}
 --- !u!1 &8233186326076921436
 GameObject:
   m_ObjectHideFlags: 0
