@@ -3171,7 +3171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLimit: 420
-  scoreGoal: 680
+  scoreGoal: 650
   startText: {fileID: 2029753946}
   levelNumber: 1
   maxOrdersAtOnce: 4
