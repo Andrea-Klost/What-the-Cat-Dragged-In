@@ -129,7 +129,7 @@ public class Cat : MonoBehaviour {
             grabScript.OnGrab(); // notify object it has been grabbed
             
             // Reparent to move with Cat
-            grabTarget.transform.SetParent(grabPoint, false);
+            grabTarget.transform.SetParent(grabPoint, true);
             
             /* Set up transform of grabbed object */
             // Rotate so that the item is facing the same direction as the Cat

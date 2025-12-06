@@ -36,6 +36,7 @@ TagManager:
   - Potion_Blue
   - Potion_Orange
   - Potion_Green
+  - Potion_Pink
   layers:
   - Default
   - TransparentFX
