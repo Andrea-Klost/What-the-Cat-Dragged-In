@@ -14,7 +14,7 @@ public class LevelSelectManager : MonoBehaviour
             int level = i + 1;
 
             // First run defaults:
-            bool defaultUnlocked = (i == 0); // only level 1 unlocked
+            bool defaultUnlocked = true; // only level 1 unlocked
             bool unlocked = PlayerPrefs.GetInt($"lvl{level}_unlocked", defaultUnlocked ? 1 : 0) == 1;
 
             nodes[i].unlocked = unlocked;
