@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6393888626004541579}
   - component: {fileID: 8004159058378903342}
   - component: {fileID: 5255853634074622948}
-  - component: {fileID: 944789882}
   - component: {fileID: 944789886}
   - component: {fileID: 4496901320792123262}
   - component: {fileID: 8985126382311825466}
+  - component: {fileID: 6065643400143138374}
   m_Layer: 10
   m_Name: Dawn_Petal
   m_TagString: Dawn_Petal
@@ -88,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &944789882
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6048465659604048433}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.1304182
-  m_Height: 0.3037072
-  m_Direction: 1
-  m_Center: {x: 0.015466364, y: 0.15191253, z: 0.0065529062}
 --- !u!114 &944789886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +129,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axis: 1
   rotationSpeed: 100
+--- !u!65 &6065643400143138374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048465659604048433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31521475, y: 0.3458286, z: 0.31691208}
+  m_Center: {x: 0.0067705074, y: 0.15154806, z: 0.007230043}
 --- !u!1001 &278641160
 PrefabInstance:
   m_ObjectHideFlags: 0

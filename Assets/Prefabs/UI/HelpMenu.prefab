@@ -2504,7 +2504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Open/Close Menu
+  m_Text: "Open/Close Menu \n(TAB)"
 --- !u!1 &5967933597653561277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,7 +2704,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pickup/Put down Items (o)
+  m_Text: Pickup/Put down Items (E)
 --- !u!1 &8685717159085700164
 GameObject:
   m_ObjectHideFlags: 0
