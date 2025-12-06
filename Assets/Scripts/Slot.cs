@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Slot : MonoBehaviour {
@@ -9,22 +10,23 @@ public class Slot : MonoBehaviour {
     public string itemName; // Cannot be item since item ref will be destroyed when the item gameobject is destroyed
     public int index; // Max of 4, 0-2 is Ingredients, 3 is Output.
     public Text slotLabel;
+    public Image slotImage;
     
-    private Image _slotImage;
     private string _defaultText;
 
     void Awake() {
-        _slotImage = GetComponent<Image>();
+        if (slotImage == null)
+            Debug.LogError("slotImage not set for Slot");
         if (slotLabel != null)
             _defaultText = slotLabel.text;
     }
-
+    
     public void SetDefaultSprite() {
-        _slotImage.sprite = defaultSprite;
+        slotImage.sprite = defaultSprite;
     }
     
     public void SetSprite(Sprite newSprite) {
-        _slotImage.GetComponent<Image>().sprite = newSprite;
+        slotImage.GetComponent<Image>().sprite = newSprite;
     }
 
     public void SetDefaultLabel() {
