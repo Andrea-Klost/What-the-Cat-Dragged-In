@@ -16,10 +16,10 @@ public class PauseMenuController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             if (pausePanel == null) return;
-            
+            if (OrderSystem.LEVEL_ENDED()) return;
+
             if (pausePanel.activeSelf) {
                 ClosePauseMenu();
             }

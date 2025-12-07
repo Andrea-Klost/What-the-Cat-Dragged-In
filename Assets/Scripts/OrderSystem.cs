@@ -214,4 +214,8 @@ public class OrderSystem : MonoBehaviour {
             return 0;
         return instance.timeLimit - (Time.time - instance._timeStart);
     }
+
+    public static bool LEVEL_ENDED() {
+        return instance._levelEnded;
+    }
 }
