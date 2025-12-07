@@ -84,7 +84,13 @@ public class OrderSystem : MonoBehaviour {
     void StartLevel() {
         if (_levelStarted)
             return;
-
+        
+        // Destroy all potions to prevent pre-making orders
+        Potion[] potionList = FindObjectsByType<Potion>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        foreach (Potion p in potionList) {
+            Destroy(p.gameObject);
+        }
+        
         _timeStart = _timeLastOrder = Time.time;
         _timeUntilNextOrder = 5;
         ChangeDeliveryLocation();
