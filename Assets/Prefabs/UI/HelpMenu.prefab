@@ -36,8 +36,8 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 149, y: -2}
-  m_SizeDelta: {x: 160, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 218.83, y: 100}
+  m_Pivot: {x: 0.45, y: 0.5}
 --- !u!222 &5216792955132240808
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jump (Spacebar)
+  m_Text: "Jump \n(Hold Spacebar)"
 --- !u!1 &167379386359418586
 GameObject:
   m_ObjectHideFlags: 0
