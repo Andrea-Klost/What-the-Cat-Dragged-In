@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589245, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14082,6 +14082,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2350305665860055143, guid: 21563a4553db8144c95a97c2f2ac0f16, type: 3}
   m_PrefabInstance: {fileID: 1279841370}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1279841372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2350305665860055140, guid: 21563a4553db8144c95a97c2f2ac0f16, type: 3}
+  m_PrefabInstance: {fileID: 1279841370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b403c5ed593f64e478cf50b091e845ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1281295315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20060,6 +20071,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1031476438}
     m_Modifications:
+    - target: {fileID: 432098678331432724, guid: 0599093a5c57ae84aadd205381c8bb40, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1279841372}
     - target: {fileID: 6794117678807311998, guid: 0599093a5c57ae84aadd205381c8bb40, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -20147,10 +20162,6 @@ PrefabInstance:
     - target: {fileID: 6794117678807311999, guid: 0599093a5c57ae84aadd205381c8bb40, type: 3}
       propertyPath: m_Name
       value: PausePanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 6794117679148152857, guid: 0599093a5c57ae84aadd205381c8bb40, type: 3}
-      propertyPath: m_Name
-      value: GameOverText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0599093a5c57ae84aadd205381c8bb40, type: 3}
