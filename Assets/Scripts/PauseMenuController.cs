@@ -19,12 +19,27 @@ public class PauseMenuController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (pausePanel == null) return;
-
-            bool show = !pausePanel.activeSelf;
-            pausePanel.SetActive(show);
-
-            // Pause game when panel is open, resume when closed
-            Time.timeScale = show ? 0f : 1f;
+            
+            if (pausePanel.activeSelf) {
+                ClosePauseMenu();
+            }
+            else {
+                OpenPauseMenu();
+            }
         }
+    }
+
+    public void ClosePauseMenu() {
+        if (pausePanel == null)
+            return;
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f; // Unpause game
+    }
+
+    public void OpenPauseMenu() {
+        if (pausePanel == null)
+            return;
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f; // Pause game
     }
 }
