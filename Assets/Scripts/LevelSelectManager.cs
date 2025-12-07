@@ -23,10 +23,10 @@ public class LevelSelectManager : MonoBehaviour
     }
 
     // Back button calls this
-    public void GoBack()
-    {
-        SceneManager.LoadScene(startScreenScene);
-    }
+    // public void GoBack()
+    // {
+    //     SceneManager.LoadScene(startScreenScene);
+    // }
 
     // Call this from gameplay when a level is completed
     public static void UnlockNextLevel(int justFinishedLevelIndex1Based)
