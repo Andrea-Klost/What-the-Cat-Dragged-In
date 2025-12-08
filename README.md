@@ -13,8 +13,9 @@ A witch has decided to start a new business venture in town and needs help to ma
 ## 🎮 Controls
 - WASD to move the cat
 - Spacebar to make the cat jump
-- O to pick up/drop ingredients
-- Hit Tab to open the recipe menu
+- E to pick up/drop ingredients
+- Tab to open the help menu
+- Escape to open the pause menu
 
 ## 🚧 Potential Future Plans
 - Implement levels 2 & 3
