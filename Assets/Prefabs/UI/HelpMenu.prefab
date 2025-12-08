@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 5438516610083519080}
   - component: {fileID: 832931336984946009}
   m_Layer: 5
-  m_Name: Panel3
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1115,7 +1115,7 @@ GameObject:
   - component: {fileID: 4544510213972128098}
   - component: {fileID: 627734597333280574}
   m_Layer: 5
-  m_Name: Image2
+  m_Name: InstructionsLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 5544709166230525989}
   - component: {fileID: 8963963313246474075}
   m_Layer: 5
-  m_Name: Panel2
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 4366741334786891595}
   - component: {fileID: 4366741334786891700}
   m_Layer: 5
-  m_Name: Panel1
+  m_Name: Recipes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2414,7 +2414,7 @@ GameObject:
   - component: {fileID: 4366741335993142489}
   - component: {fileID: 4366741335993142490}
   m_Layer: 5
-  m_Name: Image1
+  m_Name: RecipesLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2762,7 +2762,7 @@ GameObject:
   - component: {fileID: 271976895424203243}
   - component: {fileID: 4575990869819889749}
   m_Layer: 5
-  m_Name: Image3
+  m_Name: ControlsLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
